@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import android.content.ActivityNotFoundException
 import android.content.Context

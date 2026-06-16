@@ -2,7 +2,7 @@
     ExperimentalFoundationApi::class,
 )
 
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
@@ -76,37 +76,37 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.BackIcon
-import com.inspiredandroid.kai.TerminalLine
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.supportsAgenticFlows
-import com.inspiredandroid.kai.getBackgroundDispatcher
-import com.inspiredandroid.kai.onDragAndDropEventDropped
-import com.inspiredandroid.kai.ui.chat.composables.BotMessage
-import com.inspiredandroid.kai.ui.chat.composables.ChatHistorySheet
-import com.inspiredandroid.kai.ui.chat.composables.CircleIconButton
-import com.inspiredandroid.kai.ui.chat.composables.EmptyState
-import com.inspiredandroid.kai.ui.chat.composables.ErrorMessage
-import com.inspiredandroid.kai.ui.chat.composables.HeartbeatBanner
-import com.inspiredandroid.kai.ui.chat.composables.PendingSmsBanners
-import com.inspiredandroid.kai.ui.chat.composables.QuestionInput
-import com.inspiredandroid.kai.ui.chat.composables.ServiceSelector
-import com.inspiredandroid.kai.ui.chat.composables.TopBar
-import com.inspiredandroid.kai.ui.chat.composables.TrailingIcon
-import com.inspiredandroid.kai.ui.chat.composables.UserMessage
-import com.inspiredandroid.kai.ui.chat.composables.WaitingResponseRow
-import com.inspiredandroid.kai.ui.chat.composables.uiErrorText
-import com.inspiredandroid.kai.ui.components.LogoAnimation
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForList
-import com.inspiredandroid.kai.ui.dynamicui.FrozenSubmission
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiRenderer
-import com.inspiredandroid.kai.ui.dynamicui.toSpeakableText
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.markdown.KaiUiBlock
-import com.inspiredandroid.kai.ui.markdown.parseMarkdown
-import com.inspiredandroid.kai.ui.sandbox.SandboxTabsContent
-import com.inspiredandroid.kai.ui.settings.SandboxUiState
-import com.inspiredandroid.kai.ui.settings.SandboxViewModel
+import com.genzxid.app.BackIcon
+import com.genzxid.app.TerminalLine
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.supportsAgenticFlows
+import com.genzxid.app.getBackgroundDispatcher
+import com.genzxid.app.onDragAndDropEventDropped
+import com.genzxid.app.ui.chat.composables.BotMessage
+import com.genzxid.app.ui.chat.composables.ChatHistorySheet
+import com.genzxid.app.ui.chat.composables.CircleIconButton
+import com.genzxid.app.ui.chat.composables.EmptyState
+import com.genzxid.app.ui.chat.composables.ErrorMessage
+import com.genzxid.app.ui.chat.composables.HeartbeatBanner
+import com.genzxid.app.ui.chat.composables.PendingSmsBanners
+import com.genzxid.app.ui.chat.composables.QuestionInput
+import com.genzxid.app.ui.chat.composables.ServiceSelector
+import com.genzxid.app.ui.chat.composables.TopBar
+import com.genzxid.app.ui.chat.composables.TrailingIcon
+import com.genzxid.app.ui.chat.composables.UserMessage
+import com.genzxid.app.ui.chat.composables.WaitingResponseRow
+import com.genzxid.app.ui.chat.composables.uiErrorText
+import com.genzxid.app.ui.components.LogoAnimation
+import com.genzxid.app.ui.components.VerticalScrollbarForList
+import com.genzxid.app.ui.dynamicui.FrozenSubmission
+import com.genzxid.app.ui.dynamicui.KaiUiRenderer
+import com.genzxid.app.ui.dynamicui.toSpeakableText
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.markdown.KaiUiBlock
+import com.genzxid.app.ui.markdown.parseMarkdown
+import com.genzxid.app.ui.sandbox.SandboxTabsContent
+import com.genzxid.app.ui.settings.SandboxUiState
+import com.genzxid.app.ui.settings.SandboxViewModel
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.fallback_answered_by
 import kai.composeapp.generated.resources.fallback_service_failed
@@ -182,7 +182,7 @@ private fun InteractiveModeScreen(uiState: ChatUiState) {
     val snackbarHostState = remember { SnackbarHostState() }
 
     // Intercept system back to exit interactive mode instead of closing the app
-    com.inspiredandroid.kai.PlatformBackHandler(enabled = true) {
+    com.genzxid.app.PlatformBackHandler(enabled = true) {
         uiState.actions.exitInteractiveMode()
     }
 
@@ -282,7 +282,7 @@ private fun InteractiveModeScreen(uiState: ChatUiState) {
 
         // Collapsed pill floats over content at the bottom-end
         if (!showFullInput) {
-            val gradientBrush = com.inspiredandroid.kai.ui.gradientBrush
+            val gradientBrush = com.genzxid.app.ui.gradientBrush
             Row(
                 modifier = Modifier
                     .align(Alignment.BottomEnd)

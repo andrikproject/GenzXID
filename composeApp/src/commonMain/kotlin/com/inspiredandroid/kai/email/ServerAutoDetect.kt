@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
 /**
  * Auto-detects IMAP/SMTP server settings based on email domain.

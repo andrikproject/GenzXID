@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
-import com.inspiredandroid.kai.smartTruncate
+import com.genzxid.app.smartTruncate
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

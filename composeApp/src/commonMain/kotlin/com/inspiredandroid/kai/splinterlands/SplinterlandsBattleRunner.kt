@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
-import com.inspiredandroid.kai.DaemonController
-import com.inspiredandroid.kai.data.DataRepository
+import com.genzxid.app.DaemonController
+import com.genzxid.app.data.DataRepository
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

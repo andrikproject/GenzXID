@@ -1,10 +1,10 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.httpClient
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
+import com.genzxid.app.httpClient
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.request.get
 import io.ktor.client.request.header

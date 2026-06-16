@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.notifications
+package com.genzxid.app.notifications
 
-import com.inspiredandroid.kai.data.NotificationRecord
+import com.genzxid.app.data.NotificationRecord
 
 /**
  * Multiplatform notification reader. Only the Android FOSS build returns real data —
@@ -9,8 +9,8 @@ import com.inspiredandroid.kai.data.NotificationRecord
  * and wasm return no-op stubs (notification access is either restricted or doesn't
  * exist on those platforms).
  *
- * Unlike [com.inspiredandroid.kai.sms.SmsReader] which queries the system content
- * provider, this reads from the in-process [com.inspiredandroid.kai.data.NotificationStore]
+ * Unlike [com.genzxid.app.sms.SmsReader] which queries the system content
+ * provider, this reads from the in-process [com.genzxid.app.data.NotificationStore]
  * — the listener service writes records there as they arrive.
  */
 expect class NotificationReader() {

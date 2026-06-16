@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.mcp
+package com.genzxid.app.mcp
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

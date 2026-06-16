@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 /**
  * Controller for notification-listener access. Unlike [SmsPermissionController],

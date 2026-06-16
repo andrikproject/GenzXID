@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.dtos.anthropic
+package com.genzxid.app.network.dtos.anthropic
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonPrimitive

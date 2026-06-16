@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalForeignApi::class)
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.getAppFilesDirectory
+import com.genzxid.app.getAppFilesDirectory
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
 import kotlinx.cinterop.usePinned

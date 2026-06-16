@@ -1,18 +1,18 @@
 @file:OptIn(ExperimentalUuidApi::class, ExperimentalEncodingApi::class)
 
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
 import androidx.compose.runtime.Immutable
-import com.inspiredandroid.kai.data.Attachment
-import com.inspiredandroid.kai.data.FallbackStatus
-import com.inspiredandroid.kai.data.ReasoningRequestMode
-import com.inspiredandroid.kai.data.ServiceEntry
-import com.inspiredandroid.kai.data.SharedJson
-import com.inspiredandroid.kai.data.SmsDraft
-import com.inspiredandroid.kai.data.UiSubmission
-import com.inspiredandroid.kai.network.UiError
-import com.inspiredandroid.kai.network.dtos.gemini.GeminiChatRequestDto
-import com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto
+import com.genzxid.app.data.Attachment
+import com.genzxid.app.data.FallbackStatus
+import com.genzxid.app.data.ReasoningRequestMode
+import com.genzxid.app.data.ServiceEntry
+import com.genzxid.app.data.SharedJson
+import com.genzxid.app.data.SmsDraft
+import com.genzxid.app.data.UiSubmission
+import com.genzxid.app.network.UiError
+import com.genzxid.app.network.dtos.gemini.GeminiChatRequestDto
+import com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto
 import io.github.vinceglb.filekit.PlatformFile
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
@@ -90,7 +90,7 @@ data class ChatUiState(
     val isInteractiveMode: Boolean = false,
     val fallbackStatus: FallbackStatus? = null,
     val isRestoring: Boolean = true,
-    val installedSkills: ImmutableList<com.inspiredandroid.kai.skills.SkillManifest> = persistentListOf(),
+    val installedSkills: ImmutableList<com.genzxid.app.skills.SkillManifest> = persistentListOf(),
 ) {
     val heartbeatConversationId: String?
         get() = savedConversations.firstOrNull { it.isHeartbeat }?.id
@@ -140,7 +140,7 @@ fun History.toGroqMessageDto(
         val split = attachments.splitForMessage()
         // Images become image_url parts; PDFs are dropped (OpenAI-compatible has no native PDF
         // support, matching the prior behavior). Text files get merged into the text prefix.
-        // When the target service can't accept content-parts (e.g. the kai9000 proxy whose
+        // When the target service can't accept content-parts (e.g. the genzxid proxy whose
         // Groq fallback uses text-only models), drop images and emit a plain string.
         val imageAttachments = if (supportsImages) {
             split.binaries.filter { it.mimeType.startsWith("image/") }

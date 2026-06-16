@@ -1,36 +1,36 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.inspiredandroid.kai.DaemonController
-import com.inspiredandroid.kai.Platform
-import com.inspiredandroid.kai.currentPlatform
-import com.inspiredandroid.kai.data.DataRepository
-import com.inspiredandroid.kai.data.ImportSection
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.data.supportsAgenticFlows
-import com.inspiredandroid.kai.getBackgroundDispatcher
-import com.inspiredandroid.kai.httpClient
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.isEmailSupported
-import com.inspiredandroid.kai.isNotificationsSupported
-import com.inspiredandroid.kai.isSmsSupported
-import com.inspiredandroid.kai.mcp.PopularMcpServer
-import com.inspiredandroid.kai.network.AnthropicInsufficientCreditsException
-import com.inspiredandroid.kai.network.AnthropicInvalidApiKeyException
-import com.inspiredandroid.kai.network.AnthropicOverloadedException
-import com.inspiredandroid.kai.network.AnthropicRateLimitExceededException
-import com.inspiredandroid.kai.network.GeminiInvalidApiKeyException
-import com.inspiredandroid.kai.network.GeminiRateLimitExceededException
-import com.inspiredandroid.kai.network.OpenAICompatibleConnectionException
-import com.inspiredandroid.kai.network.OpenAICompatibleInvalidApiKeyException
-import com.inspiredandroid.kai.network.OpenAICompatibleQuotaExhaustedException
-import com.inspiredandroid.kai.network.OpenAICompatibleRateLimitExceededException
-import com.inspiredandroid.kai.network.dtos.SponsorsResponseDto
-import com.inspiredandroid.kai.skills.parseGitHubSkillUrl
-import com.inspiredandroid.kai.tools.NotificationPermissionController
+import com.genzxid.app.DaemonController
+import com.genzxid.app.Platform
+import com.genzxid.app.currentPlatform
+import com.genzxid.app.data.DataRepository
+import com.genzxid.app.data.ImportSection
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.data.supportsAgenticFlows
+import com.genzxid.app.getBackgroundDispatcher
+import com.genzxid.app.httpClient
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.isEmailSupported
+import com.genzxid.app.isNotificationsSupported
+import com.genzxid.app.isSmsSupported
+import com.genzxid.app.mcp.PopularMcpServer
+import com.genzxid.app.network.AnthropicInsufficientCreditsException
+import com.genzxid.app.network.AnthropicInvalidApiKeyException
+import com.genzxid.app.network.AnthropicOverloadedException
+import com.genzxid.app.network.AnthropicRateLimitExceededException
+import com.genzxid.app.network.GeminiInvalidApiKeyException
+import com.genzxid.app.network.GeminiRateLimitExceededException
+import com.genzxid.app.network.OpenAICompatibleConnectionException
+import com.genzxid.app.network.OpenAICompatibleInvalidApiKeyException
+import com.genzxid.app.network.OpenAICompatibleQuotaExhaustedException
+import com.genzxid.app.network.OpenAICompatibleRateLimitExceededException
+import com.genzxid.app.network.dtos.SponsorsResponseDto
+import com.genzxid.app.skills.parseGitHubSkillUrl
+import com.genzxid.app.tools.NotificationPermissionController
 import io.ktor.client.call.body
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
@@ -838,11 +838,11 @@ class SettingsViewModel(
         runSkillInstall { dataRepository.installGitHubSkill(source.owner, source.repo, source.ref, source.path) }
     }
 
-    private fun onInstallBrowsedSkill(entry: com.inspiredandroid.kai.skills.RegistrySkillEntry) {
+    private fun onInstallBrowsedSkill(entry: com.genzxid.app.skills.RegistrySkillEntry) {
         runSkillInstall { dataRepository.installBrowsedSkill(entry) }
     }
 
-    private inline fun runSkillInstall(crossinline install: suspend () -> Result<com.inspiredandroid.kai.skills.SkillManifest>) {
+    private inline fun runSkillInstall(crossinline install: suspend () -> Result<com.genzxid.app.skills.SkillManifest>) {
         _state.update { it.copy(isInstallingSkill = true, skillInstallError = null) }
         viewModelScope.launch(backgroundDispatcher) {
             val result = install()

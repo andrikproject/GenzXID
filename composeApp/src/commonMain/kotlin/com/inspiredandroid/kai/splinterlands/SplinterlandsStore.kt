@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.SharedJson
-import com.inspiredandroid.kai.data.getInstanceModelId
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.SharedJson
+import com.genzxid.app.data.getInstanceModelId
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 

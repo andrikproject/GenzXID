@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
-import com.inspiredandroid.kai.data.Attachment
+import com.genzxid.app.data.Attachment
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonPrimitive
@@ -10,7 +10,7 @@ import kotlin.test.assertTrue
 
 /**
  * Guards the Bug A invariant: when the target service can't accept content-parts payloads
- * (the kai9000 proxy fans out to text-only Groq fallbacks on rate-limit), image attachments
+ * (the genzxid proxy fans out to text-only Groq fallbacks on rate-limit), image attachments
  * must be dropped from the outgoing message and `content` must be a plain string.
  *
  * Sending a `JsonArray` content to gpt-oss-20b/120b triggers a 400:

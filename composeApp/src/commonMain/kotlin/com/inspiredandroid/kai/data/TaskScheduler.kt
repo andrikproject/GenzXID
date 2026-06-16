@@ -1,14 +1,14 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.email.EmailPoller
-import com.inspiredandroid.kai.getBackgroundDispatcher
-import com.inspiredandroid.kai.isEmailSupported
-import com.inspiredandroid.kai.isNotificationsSupported
-import com.inspiredandroid.kai.isSmsSupported
-import com.inspiredandroid.kai.sendHeartbeatNotification
-import com.inspiredandroid.kai.sms.SmsPoller
-import com.inspiredandroid.kai.ui.markdown.parseMarkdown
-import com.inspiredandroid.kai.ui.markdown.toSpeakableText
+import com.genzxid.app.email.EmailPoller
+import com.genzxid.app.getBackgroundDispatcher
+import com.genzxid.app.isEmailSupported
+import com.genzxid.app.isNotificationsSupported
+import com.genzxid.app.isSmsSupported
+import com.genzxid.app.sendHeartbeatNotification
+import com.genzxid.app.sms.SmsPoller
+import com.genzxid.app.ui.markdown.parseMarkdown
+import com.genzxid.app.ui.markdown.toSpeakableText
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 actual fun createDaemonController(): DaemonController = NoOpDaemonController()
 

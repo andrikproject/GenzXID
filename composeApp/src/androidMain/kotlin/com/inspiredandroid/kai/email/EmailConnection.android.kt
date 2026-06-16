@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -1,6 +1,6 @@
 @file:OptIn(kotlin.time.ExperimentalTime::class)
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.Serializable

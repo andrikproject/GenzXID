@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module

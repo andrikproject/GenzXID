@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,10 +26,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.Attachment
-import com.inspiredandroid.kai.decodeToImageBitmap
-import com.inspiredandroid.kai.ui.components.LocalShowFullScreenImage
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.data.Attachment
+import com.genzxid.app.decodeToImageBitmap
+import com.genzxid.app.ui.components.LocalShowFullScreenImage
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.ic_file
 import kotlinx.collections.immutable.ImmutableList

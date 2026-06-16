@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

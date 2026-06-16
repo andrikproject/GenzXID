@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.notifications
+package com.genzxid.app.notifications
 
-import com.inspiredandroid.kai.data.NotificationRecord
+import com.genzxid.app.data.NotificationRecord
 
 actual class NotificationReader actual constructor() {
     actual fun isSupported(): Boolean = false

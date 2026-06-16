@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.dynamicui
+package com.genzxid.app.ui.dynamicui
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.SerialName

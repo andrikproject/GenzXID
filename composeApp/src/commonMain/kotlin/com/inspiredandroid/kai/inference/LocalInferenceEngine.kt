@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.ui.sandbox
+package com.genzxid.app.ui.sandbox
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.CommandHandle
-import com.inspiredandroid.kai.NoOpCommandHandle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxFileEntry
-import com.inspiredandroid.kai.SandboxStatus
+import com.genzxid.app.CommandHandle
+import com.genzxid.app.NoOpCommandHandle
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxFileEntry
+import com.genzxid.app.SandboxStatus
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.sandbox_files_delete_failed
 import kai.composeapp.generated.resources.sandbox_files_delete_success

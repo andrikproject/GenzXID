@@ -1,15 +1,15 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.SmsDraft
-import com.inspiredandroid.kai.data.SmsDraftStore
-import com.inspiredandroid.kai.data.SmsMessage
-import com.inspiredandroid.kai.data.SmsStore
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.sms.SmsReader
-import com.inspiredandroid.kai.sms.SmsSender
+import com.genzxid.app.data.SmsDraft
+import com.genzxid.app.data.SmsDraftStore
+import com.genzxid.app.data.SmsMessage
+import com.genzxid.app.data.SmsStore
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.sms.SmsReader
+import com.genzxid.app.sms.SmsSender
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tool_check_sms_description
 import kai.composeapp.generated.resources.tool_check_sms_name

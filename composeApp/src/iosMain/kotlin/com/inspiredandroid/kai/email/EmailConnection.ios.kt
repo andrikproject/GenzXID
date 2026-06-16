@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
 import io.ktor.network.selector.SelectorManager
 import io.ktor.network.sockets.aSocket

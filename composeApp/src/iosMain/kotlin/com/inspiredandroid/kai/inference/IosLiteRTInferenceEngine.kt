@@ -1,8 +1,8 @@
 @file:OptIn(kotlinx.cinterop.ExperimentalForeignApi::class, kotlinx.cinterop.BetaInteropApi::class)
 
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
-import com.inspiredandroid.kai.httpClient
+import com.genzxid.app.httpClient
 import io.ktor.client.request.prepareGet
 import io.ktor.client.statement.bodyAsChannel
 import io.ktor.http.contentLength

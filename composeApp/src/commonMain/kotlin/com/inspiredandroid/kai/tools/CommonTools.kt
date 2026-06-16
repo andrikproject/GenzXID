@@ -1,14 +1,14 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.MemoryCategory
-import com.inspiredandroid.kai.data.MemoryStore
-import com.inspiredandroid.kai.httpClient
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.openUrl
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.MemoryCategory
+import com.genzxid.app.data.MemoryStore
+import com.genzxid.app.httpClient
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.openUrl
 import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
 import android.Manifest
 import android.content.Context

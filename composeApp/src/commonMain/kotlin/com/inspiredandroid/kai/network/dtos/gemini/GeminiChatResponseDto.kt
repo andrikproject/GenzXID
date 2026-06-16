@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.dtos.gemini
+package com.genzxid.app.network.dtos.gemini
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement

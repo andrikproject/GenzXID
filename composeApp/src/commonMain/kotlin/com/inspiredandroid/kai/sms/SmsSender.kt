@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
 /**
  * Multiplatform SMS sender. Only the Android FOSS build actually sends — the

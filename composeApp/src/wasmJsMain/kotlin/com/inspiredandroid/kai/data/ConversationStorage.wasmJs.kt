@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlinx.browser.localStorage
 import kotlin.io.encoding.Base64

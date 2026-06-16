@@ -1,15 +1,15 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.inspiredandroid.kai.data.DataRepository
-import com.inspiredandroid.kai.getBackgroundDispatcher
-import com.inspiredandroid.kai.isSplinterlandsSupported
-import com.inspiredandroid.kai.splinterlands.BattleStatus
-import com.inspiredandroid.kai.splinterlands.SplinterlandsAccount
-import com.inspiredandroid.kai.splinterlands.SplinterlandsApi
-import com.inspiredandroid.kai.splinterlands.SplinterlandsBattleRunner
-import com.inspiredandroid.kai.splinterlands.SplinterlandsStore
+import com.genzxid.app.data.DataRepository
+import com.genzxid.app.getBackgroundDispatcher
+import com.genzxid.app.isSplinterlandsSupported
+import com.genzxid.app.splinterlands.BattleStatus
+import com.genzxid.app.splinterlands.SplinterlandsAccount
+import com.genzxid.app.splinterlands.SplinterlandsApi
+import com.genzxid.app.splinterlands.SplinterlandsBattleRunner
+import com.genzxid.app.splinterlands.SplinterlandsStore
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.Job

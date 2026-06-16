@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.app.Application
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.sandbox.sandboxModule
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.sandbox.sandboxModule
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

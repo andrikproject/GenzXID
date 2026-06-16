@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color

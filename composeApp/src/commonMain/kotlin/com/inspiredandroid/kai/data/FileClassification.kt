@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 enum class FileCategory {
     IMAGE,

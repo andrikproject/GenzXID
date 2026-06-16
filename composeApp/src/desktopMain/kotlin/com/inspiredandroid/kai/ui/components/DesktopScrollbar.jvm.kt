@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.components
+package com.genzxid.app.ui.components
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.ScrollbarStyle

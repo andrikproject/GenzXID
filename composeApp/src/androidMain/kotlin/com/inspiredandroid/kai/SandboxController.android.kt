@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.content.Context
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import com.inspiredandroid.kai.sandbox.LinuxSandboxManager
-import com.inspiredandroid.kai.sandbox.SandboxState
-import com.inspiredandroid.kai.sandbox.SessionShell
-import com.inspiredandroid.kai.sandbox.openFileWithIntent
-import com.inspiredandroid.kai.sandbox.resolveSandboxAbsolute
+import com.genzxid.app.sandbox.LinuxSandboxManager
+import com.genzxid.app.sandbox.SandboxState
+import com.genzxid.app.sandbox.SessionShell
+import com.genzxid.app.sandbox.openFileWithIntent
+import com.genzxid.app.sandbox.resolveSandboxAbsolute
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -140,7 +140,7 @@ class AndroidSandboxController : SandboxController {
         sandboxManager.closeShell(sessionId)
     }
 
-    override fun transcriptFor(sessionId: String): SnapshotStateList<com.inspiredandroid.kai.TerminalLine> = sandboxManager.transcriptFor(sessionId)
+    override fun transcriptFor(sessionId: String): SnapshotStateList<com.genzxid.app.TerminalLine> = sandboxManager.transcriptFor(sessionId)
 
     override fun clearTranscript(sessionId: String) {
         sandboxManager.clearTranscript(sessionId)

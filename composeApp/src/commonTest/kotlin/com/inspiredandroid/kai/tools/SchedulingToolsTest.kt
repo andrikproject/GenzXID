@@ -1,9 +1,9 @@
 @file:OptIn(kotlin.time.ExperimentalTime::class)
 
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.TaskStore
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.TaskStore
 import com.russhwolf.settings.MapSettings
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.TimeZone

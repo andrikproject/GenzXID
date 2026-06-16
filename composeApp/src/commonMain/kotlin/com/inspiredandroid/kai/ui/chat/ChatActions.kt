@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
 import androidx.compose.runtime.Immutable
 import io.github.vinceglb.filekit.PlatformFile

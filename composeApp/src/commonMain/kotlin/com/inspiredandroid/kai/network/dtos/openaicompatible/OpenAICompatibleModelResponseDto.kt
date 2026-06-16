@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.dtos.openaicompatible
+package com.genzxid.app.network.dtos.openaicompatible
 
 import kotlinx.serialization.Serializable
 

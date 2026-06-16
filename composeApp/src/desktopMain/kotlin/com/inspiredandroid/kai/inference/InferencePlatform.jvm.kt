@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
-import com.inspiredandroid.kai.getAppFilesDirectory
+import com.genzxid.app.getAppFilesDirectory
 import java.io.File
 import java.lang.management.ManagementFactory
 

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -8,12 +8,12 @@ import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 
 /**
- * Persistence for notifications captured by [com.inspiredandroid.kai.notifications.KaiNotificationListenerService].
+ * Persistence for notifications captured by [com.genzxid.app.notifications.KaiNotificationListenerService].
  *
  * Two collections:
  * - **Pending queue** — capped FIFO that fills as the listener fires and gets snapshotted
  *   into the heartbeat prompt, then drained. Mirrors [SmsStore].
- * - **Store** — broader rolling history backing [com.inspiredandroid.kai.notifications.NotificationReader],
+ * - **Store** — broader rolling history backing [com.genzxid.app.notifications.NotificationReader],
  *   bounded by per-app cap and age cap.
  *
  * Per-app gating is handled by the system Notification Access "Apps" picker — if the

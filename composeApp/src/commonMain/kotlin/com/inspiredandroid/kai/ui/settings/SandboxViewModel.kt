@@ -1,13 +1,13 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.inspiredandroid.kai.Platform
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxStatus
-import com.inspiredandroid.kai.currentPlatform
-import com.inspiredandroid.kai.data.DataRepository
+import com.genzxid.app.Platform
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxStatus
+import com.genzxid.app.currentPlatform
+import com.genzxid.app.data.DataRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

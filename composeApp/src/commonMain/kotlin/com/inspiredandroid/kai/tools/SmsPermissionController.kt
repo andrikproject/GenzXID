@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 import androidx.compose.runtime.Composable
 import kotlinx.coroutines.flow.StateFlow

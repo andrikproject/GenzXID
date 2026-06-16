@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 sealed interface SandboxState {
     data object NotInstalled : SandboxState

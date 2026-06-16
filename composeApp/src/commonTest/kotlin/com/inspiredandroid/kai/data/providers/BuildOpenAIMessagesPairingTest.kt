@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.data.providers
+package com.genzxid.app.data.providers
 
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.chat.ToolCallInfo
+import com.genzxid.app.data.Service
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.chat.ToolCallInfo
 import kotlinx.collections.immutable.persistentListOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -19,7 +19,7 @@ import kotlin.test.assertTrue
  */
 class BuildOpenAIMessagesPairingTest {
 
-    private fun assertNoDanglingToolCalls(messages: List<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>) {
+    private fun assertNoDanglingToolCalls(messages: List<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>) {
         for ((i, msg) in messages.withIndex()) {
             if (msg.role == "assistant" && !msg.tool_calls.isNullOrEmpty()) {
                 val responded = messages.drop(i + 1)

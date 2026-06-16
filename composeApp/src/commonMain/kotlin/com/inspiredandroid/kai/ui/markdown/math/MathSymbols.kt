@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown.math
+package com.genzxid.app.ui.markdown.math
 
 /**
  * LaTeX command → Unicode mapping for the symbols that LLMs actually emit.

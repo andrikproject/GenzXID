@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
 /**
  * GFM-style emoji shortcode map (e.g. `:tada:` → 🎉). Covers the commonly-used subset that

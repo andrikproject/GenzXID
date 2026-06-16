@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

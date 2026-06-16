@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
 /**
  * A skill marketplace: a public GitHub repo that hosts SKILL.md skills. The

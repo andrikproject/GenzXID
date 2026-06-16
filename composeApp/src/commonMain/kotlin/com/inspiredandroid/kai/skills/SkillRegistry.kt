@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
-import com.inspiredandroid.kai.data.SharedJson
-import com.inspiredandroid.kai.httpClient
+import com.genzxid.app.data.SharedJson
+import com.genzxid.app.httpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.header

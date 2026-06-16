@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.app.Activity
 import com.google.android.play.core.review.ReviewManagerFactory

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import com.russhwolf.settings.MapSettings
 import kotlinx.coroutines.test.runTest

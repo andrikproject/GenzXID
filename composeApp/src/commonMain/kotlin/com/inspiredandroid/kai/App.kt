@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -34,26 +34,26 @@ import coil3.PlatformContext
 import coil3.compose.setSingletonImageLoaderFactory
 import coil3.network.ktor3.KtorNetworkFetcherFactory
 import coil3.svg.SvgDecoder
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.tools.CalendarPermissionController
-import com.inspiredandroid.kai.tools.NotificationPermissionController
-import com.inspiredandroid.kai.tools.SetupCalendarPermissionHandler
-import com.inspiredandroid.kai.tools.SetupNotificationPermissionHandler
-import com.inspiredandroid.kai.tools.SetupSmsPermissionHandler
-import com.inspiredandroid.kai.tools.SetupSmsSendPermissionHandler
-import com.inspiredandroid.kai.tools.SmsPermissionController
-import com.inspiredandroid.kai.tools.SmsSendPermissionController
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.LightColorScheme
-import com.inspiredandroid.kai.ui.Theme
-import com.inspiredandroid.kai.ui.chat.ChatScreen
-import com.inspiredandroid.kai.ui.chat.ChatViewModel
-import com.inspiredandroid.kai.ui.components.FullScreenImageHost
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.rememberSandboxAwareUriHandler
-import com.inspiredandroid.kai.ui.settings.SettingsScreen
-import com.inspiredandroid.kai.ui.withBlackBackground
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.tools.CalendarPermissionController
+import com.genzxid.app.tools.NotificationPermissionController
+import com.genzxid.app.tools.SetupCalendarPermissionHandler
+import com.genzxid.app.tools.SetupNotificationPermissionHandler
+import com.genzxid.app.tools.SetupSmsPermissionHandler
+import com.genzxid.app.tools.SetupSmsSendPermissionHandler
+import com.genzxid.app.tools.SmsPermissionController
+import com.genzxid.app.tools.SmsSendPermissionController
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.LightColorScheme
+import com.genzxid.app.ui.Theme
+import com.genzxid.app.ui.chat.ChatScreen
+import com.genzxid.app.ui.chat.ChatViewModel
+import com.genzxid.app.ui.components.FullScreenImageHost
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.rememberSandboxAwareUriHandler
+import com.genzxid.app.ui.settings.SettingsScreen
+import com.genzxid.app.ui.withBlackBackground
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tab_chat
 import kai.composeapp.generated.resources.tab_settings

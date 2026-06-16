@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 /**
  * Curated metadata for well-known models. Used as a fallback by

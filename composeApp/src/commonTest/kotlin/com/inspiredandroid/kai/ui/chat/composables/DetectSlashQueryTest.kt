@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

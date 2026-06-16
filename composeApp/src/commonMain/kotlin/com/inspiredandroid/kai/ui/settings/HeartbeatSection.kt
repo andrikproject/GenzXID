@@ -1,6 +1,6 @@
 @file:OptIn(kotlin.time.ExperimentalTime::class)
 
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -37,17 +37,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.EmailAccount
-import com.inspiredandroid.kai.data.EmailSyncState
-import com.inspiredandroid.kai.data.HeartbeatLogEntry
-import com.inspiredandroid.kai.data.ServiceEntry
-import com.inspiredandroid.kai.data.SmsSyncState
-import com.inspiredandroid.kai.ui.KaiOutlinedTextField
-import com.inspiredandroid.kai.ui.components.KaiRangeSlider
-import com.inspiredandroid.kai.ui.components.KaiSlider
-import com.inspiredandroid.kai.ui.components.RefreshIconButton
-import com.inspiredandroid.kai.ui.components.SettingsListItem
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.data.EmailAccount
+import com.genzxid.app.data.EmailSyncState
+import com.genzxid.app.data.HeartbeatLogEntry
+import com.genzxid.app.data.ServiceEntry
+import com.genzxid.app.data.SmsSyncState
+import com.genzxid.app.ui.KaiOutlinedTextField
+import com.genzxid.app.ui.components.KaiRangeSlider
+import com.genzxid.app.ui.components.KaiSlider
+import com.genzxid.app.ui.components.RefreshIconButton
+import com.genzxid.app.ui.components.SettingsListItem
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.settings_email
 import kai.composeapp.generated.resources.settings_email_description

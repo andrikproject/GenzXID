@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
-import com.inspiredandroid.kai.data.ReasoningRequestMode
+import com.genzxid.app.data.ReasoningRequestMode
 import kotlinx.collections.immutable.persistentListOf
 import kotlin.test.Test
 import kotlin.test.assertEquals

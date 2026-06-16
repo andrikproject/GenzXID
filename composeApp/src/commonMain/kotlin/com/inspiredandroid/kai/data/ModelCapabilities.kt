@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 /**
  * Model IDs (by prefix, lower-cased) that can't drive tool/function-calling loops

@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.mcp
+package com.genzxid.app.mcp
 
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolSchema
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolSchema
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull

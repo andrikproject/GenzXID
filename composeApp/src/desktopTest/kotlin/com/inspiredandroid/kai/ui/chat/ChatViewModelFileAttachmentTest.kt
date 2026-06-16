@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.testutil.FakeDataRepository
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.testutil.FakeDataRepository
 import io.github.vinceglb.filekit.PlatformFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -154,12 +154,12 @@ class ChatViewModelFileAttachmentTest {
 
     @Test
     fun `truncateFileName returns short names unchanged`() {
-        assertEquals("cat.png", com.inspiredandroid.kai.ui.chat.composables.truncateFileName("cat.png"))
+        assertEquals("cat.png", com.genzxid.app.ui.chat.composables.truncateFileName("cat.png"))
     }
 
     @Test
     fun `truncateFileName shortens long names and keeps extension`() {
-        val result = com.inspiredandroid.kai.ui.chat.composables.truncateFileName(
+        val result = com.genzxid.app.ui.chat.composables.truncateFileName(
             "a-really-long-screenshot-name.png",
             maxChars = 16,
         )
@@ -171,7 +171,7 @@ class ChatViewModelFileAttachmentTest {
 
     @Test
     fun `truncateFileName handles names without extension`() {
-        val result = com.inspiredandroid.kai.ui.chat.composables.truncateFileName(
+        val result = com.genzxid.app.ui.chat.composables.truncateFileName(
             "a-really-long-name-without-ext",
             maxChars = 10,
         )

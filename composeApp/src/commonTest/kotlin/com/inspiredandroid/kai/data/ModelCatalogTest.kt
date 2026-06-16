@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

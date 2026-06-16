@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.settings_open_github_issue
 import kai.composeapp.generated.resources.settings_request_integration_description

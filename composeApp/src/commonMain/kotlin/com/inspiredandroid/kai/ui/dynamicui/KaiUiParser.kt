@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.ui.dynamicui
+package com.genzxid.app.ui.dynamicui
 
-import com.inspiredandroid.kai.data.SharedJson
+import com.genzxid.app.data.SharedJson
 import kotlinx.collections.immutable.toImmutableList
 
 /**

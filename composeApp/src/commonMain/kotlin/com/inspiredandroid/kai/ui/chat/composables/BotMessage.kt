@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -41,12 +41,12 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.getBackgroundDispatcher
-import com.inspiredandroid.kai.ui.dynamicui.FrozenSubmission
-import com.inspiredandroid.kai.ui.dynamicui.toSpeakableText
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.markdown.MarkdownContent
-import com.inspiredandroid.kai.ui.markdown.parseMarkdown
+import com.genzxid.app.getBackgroundDispatcher
+import com.genzxid.app.ui.dynamicui.FrozenSubmission
+import com.genzxid.app.ui.dynamicui.toSpeakableText
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.markdown.MarkdownContent
+import com.genzxid.app.ui.markdown.parseMarkdown
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.bot_message_copy_content_description
 import kai.composeapp.generated.resources.bot_message_flag_content_description

@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 import android.content.Context
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.sandbox.LinuxSandboxManager
-import com.inspiredandroid.kai.sandbox.openFileWithIntent
-import com.inspiredandroid.kai.sandbox.resolveSandboxFile
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.sandbox.LinuxSandboxManager
+import com.genzxid.app.sandbox.openFileWithIntent
+import com.genzxid.app.sandbox.resolveSandboxFile
 import org.koin.java.KoinJavaComponent.inject
 
 private const val OPEN_FILE_DESCRIPTION = """Open a file from the sandbox /root directory in the user's default Android app — browser for HTML, image viewer for PNG/JPG, PDF viewer for PDF, markdown viewer for .md, etc. This is how you show finished work to the user.

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -28,7 +28,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.image_viewer_close
 import org.jetbrains.compose.resources.stringResource
@@ -36,8 +36,8 @@ import org.jetbrains.compose.resources.stringResource
 /**
  * Fullscreen image overlay. Rendered at the App root (not in a Dialog) so it
  * covers the entire Activity content including status / navigation bar areas.
- * Use via [com.inspiredandroid.kai.ui.components.FullScreenImageHost] +
- * [com.inspiredandroid.kai.ui.components.LocalShowFullScreenImage].
+ * Use via [com.genzxid.app.ui.components.FullScreenImageHost] +
+ * [com.genzxid.app.ui.components.LocalShowFullScreenImage].
  */
 @Composable
 internal fun FullScreenImageViewerOverlay(

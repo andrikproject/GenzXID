@@ -1,13 +1,13 @@
-package com.inspiredandroid.kai.ui.sandbox
+package com.genzxid.app.ui.sandbox
 
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.inspiredandroid.kai.CommandHandle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxSessions
-import com.inspiredandroid.kai.TerminalLine
-import com.inspiredandroid.kai.data.DataRepository
+import com.genzxid.app.CommandHandle
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxSessions
+import com.genzxid.app.TerminalLine
+import com.genzxid.app.data.DataRepository
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow

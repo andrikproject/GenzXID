@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import androidx.compose.runtime.Immutable
 import kotlinx.coroutines.sync.Mutex

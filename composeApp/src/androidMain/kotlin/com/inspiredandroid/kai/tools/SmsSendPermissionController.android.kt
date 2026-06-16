@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 import android.Manifest
 import android.content.Context

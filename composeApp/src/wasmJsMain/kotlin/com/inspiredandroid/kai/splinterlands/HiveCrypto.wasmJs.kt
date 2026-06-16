@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
 actual fun signMessage(message: String, postingKeyWif: String): String = throw UnsupportedOperationException("Splinterlands is not supported on Web")
 

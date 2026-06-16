@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.TaskStatus
-import com.inspiredandroid.kai.data.TaskStore
-import com.inspiredandroid.kai.data.TaskTrigger
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
+import com.genzxid.app.data.TaskStatus
+import com.genzxid.app.data.TaskStore
+import com.genzxid.app.data.TaskTrigger
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tool_cancel_task_description
 import kai.composeapp.generated.resources.tool_cancel_task_name

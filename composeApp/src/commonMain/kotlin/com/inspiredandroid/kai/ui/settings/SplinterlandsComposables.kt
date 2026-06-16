@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -55,17 +55,17 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.splinterlands.BattleLogEntry
-import com.inspiredandroid.kai.splinterlands.BattlePhase
-import com.inspiredandroid.kai.splinterlands.LlmServiceStatus
-import com.inspiredandroid.kai.splinterlands.ModelStats
-import com.inspiredandroid.kai.splinterlands.computeModelStats
-import com.inspiredandroid.kai.ui.KaiOutlinedTextField
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForScroll
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.icons.DragIndicator
-import com.inspiredandroid.kai.ui.icons.Visibility
-import com.inspiredandroid.kai.ui.icons.VisibilityOff
+import com.genzxid.app.splinterlands.BattleLogEntry
+import com.genzxid.app.splinterlands.BattlePhase
+import com.genzxid.app.splinterlands.LlmServiceStatus
+import com.genzxid.app.splinterlands.ModelStats
+import com.genzxid.app.splinterlands.computeModelStats
+import com.genzxid.app.ui.KaiOutlinedTextField
+import com.genzxid.app.ui.components.VerticalScrollbarForScroll
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.icons.DragIndicator
+import com.genzxid.app.ui.icons.Visibility
+import com.genzxid.app.ui.icons.VisibilityOff
 import kai.composeapp.generated.resources.Res
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -80,7 +80,7 @@ internal fun SplinterlandsSection(
     instanceIds: ImmutableList<String>,
     addStatus: SplinterlandsAddStatus,
     battleLog: ImmutableList<BattleLogEntry>,
-    availableServices: ImmutableList<com.inspiredandroid.kai.data.ServiceEntry>,
+    availableServices: ImmutableList<com.genzxid.app.data.ServiceEntry>,
     onToggle: (Boolean) -> Unit,
     onTestAndAddAccount: (String, String) -> Unit,
     onRemoveAccount: (String) -> Unit,
@@ -185,7 +185,7 @@ internal fun SplinterlandsSection(
 @Composable
 private fun SplinterlandsServiceList(
     instanceIds: ImmutableList<String>,
-    availableServices: ImmutableList<com.inspiredandroid.kai.data.ServiceEntry>,
+    availableServices: ImmutableList<com.genzxid.app.data.ServiceEntry>,
     onAddService: (String) -> Unit,
     onRemoveService: (String) -> Unit,
     onReorderServices: (List<String>) -> Unit,

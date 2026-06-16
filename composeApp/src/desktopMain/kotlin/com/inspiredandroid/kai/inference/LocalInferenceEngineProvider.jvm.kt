@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 import java.io.File
 

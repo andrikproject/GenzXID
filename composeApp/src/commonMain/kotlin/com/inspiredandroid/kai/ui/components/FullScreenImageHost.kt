@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.components
+package com.genzxid.app.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,8 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
-import com.inspiredandroid.kai.PlatformBackHandler
-import com.inspiredandroid.kai.ui.chat.composables.FullScreenImageViewerOverlay
+import com.genzxid.app.PlatformBackHandler
+import com.genzxid.app.ui.chat.composables.FullScreenImageViewerOverlay
 
 val LocalShowFullScreenImage = staticCompositionLocalOf<(ImageBitmap) -> Unit> { { } }
 

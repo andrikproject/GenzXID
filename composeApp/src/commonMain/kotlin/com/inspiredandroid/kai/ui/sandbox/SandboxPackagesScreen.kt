@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.sandbox
+package com.genzxid.app.ui.sandbox
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -33,8 +33,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.ui.components.KaiSearchField
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.ui.components.KaiSearchField
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.sandbox_files_dialog_cancel
 import kai.composeapp.generated.resources.sandbox_packages_action_clear_search

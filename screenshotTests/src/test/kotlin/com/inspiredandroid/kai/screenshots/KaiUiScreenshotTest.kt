@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalVoiceApi::class)
 
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.layout.padding
@@ -13,16 +13,16 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.LightColorScheme
-import com.inspiredandroid.kai.ui.Theme
-import com.inspiredandroid.kai.ui.chat.ChatScreenContent
-import com.inspiredandroid.kai.ui.chat.ChatUiState
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiParser
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiParser.UiBlockResult
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiRenderer
-import com.inspiredandroid.kai.ui.dynamicui.LocalPreviewImages
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.LightColorScheme
+import com.genzxid.app.ui.Theme
+import com.genzxid.app.ui.chat.ChatScreenContent
+import com.genzxid.app.ui.chat.ChatUiState
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.dynamicui.KaiUiParser
+import com.genzxid.app.ui.dynamicui.KaiUiParser.UiBlockResult
+import com.genzxid.app.ui.dynamicui.KaiUiRenderer
+import com.genzxid.app.ui.dynamicui.LocalPreviewImages
 import kotlinx.collections.immutable.persistentListOf
 import nl.marc_apps.tts.experimental.ExperimentalVoiceApi
 import org.jetbrains.compose.resources.ExperimentalResourceApi

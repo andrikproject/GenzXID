@@ -1,11 +1,11 @@
 @file:OptIn(kotlin.uuid.ExperimentalUuidApi::class, kotlin.time.ExperimentalTime::class)
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_CONFIGURED_SERVICES
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_CURRENT_SERVICE_ID
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_FREE_FALLBACK_ENABLED
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_TOOL_PREFIX
+import com.genzxid.app.data.AppSettings.Companion.KEY_CONFIGURED_SERVICES
+import com.genzxid.app.data.AppSettings.Companion.KEY_CURRENT_SERVICE_ID
+import com.genzxid.app.data.AppSettings.Companion.KEY_FREE_FALLBACK_ENABLED
+import com.genzxid.app.data.AppSettings.Companion.KEY_TOOL_PREFIX
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement

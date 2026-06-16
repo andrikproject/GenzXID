@@ -1,10 +1,10 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.sandbox.LinuxSandboxManager
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.sandbox.LinuxSandboxManager
 import org.koin.java.KoinJavaComponent.inject
 import kotlin.time.Duration.Companion.seconds
 

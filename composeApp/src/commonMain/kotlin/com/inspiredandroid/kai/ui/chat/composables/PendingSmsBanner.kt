@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInVertically
@@ -25,11 +25,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.SmsDraft
-import com.inspiredandroid.kai.data.SmsDraftStatus
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardBorder
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardColors
+import com.genzxid.app.data.SmsDraft
+import com.genzxid.app.data.SmsDraftStatus
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.kaiAdaptiveCardBorder
+import com.genzxid.app.ui.kaiAdaptiveCardColors
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.ic_close
 import kai.composeapp.generated.resources.sms_draft_banner_discard

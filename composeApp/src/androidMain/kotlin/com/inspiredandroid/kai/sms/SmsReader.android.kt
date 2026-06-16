@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.provider.Telephony
 import androidx.core.content.ContextCompat
-import com.inspiredandroid.kai.data.SmsMessage
+import com.genzxid.app.data.SmsMessage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject

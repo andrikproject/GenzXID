@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.network
+package com.genzxid.app.network
 
-import com.inspiredandroid.kai.inference.InferenceTimeoutException
-import com.inspiredandroid.kai.inference.InsufficientMemoryException
-import com.inspiredandroid.kai.inference.NoModelDownloadedException
+import com.genzxid.app.inference.InferenceTimeoutException
+import com.genzxid.app.inference.InsufficientMemoryException
+import com.genzxid.app.inference.NoModelDownloadedException
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertIs

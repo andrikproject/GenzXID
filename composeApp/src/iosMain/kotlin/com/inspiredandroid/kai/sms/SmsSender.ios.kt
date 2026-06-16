@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
 actual class SmsSender actual constructor() {
     actual fun hasPermission(): Boolean = false

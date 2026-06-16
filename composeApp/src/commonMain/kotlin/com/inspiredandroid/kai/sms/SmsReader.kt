@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
-import com.inspiredandroid.kai.data.SmsMessage
+import com.genzxid.app.data.SmsMessage
 
 /**
  * Multiplatform SMS reader. Only the Android FOSS build returns real data — the
@@ -38,7 +38,7 @@ expect class SmsReader() {
     suspend fun search(query: String, limit: Int): List<SmsMessage>
 
     /**
-     * The current maximum inbox `_id`. Used to seed [com.inspiredandroid.kai.data.SmsSyncState.lastSeenId]
+     * The current maximum inbox `_id`. Used to seed [com.genzxid.app.data.SmsSyncState.lastSeenId]
      * on first enable so we don't dump the entire SMS history into pending.
      */
     suspend fun currentMaxInboxId(): Long

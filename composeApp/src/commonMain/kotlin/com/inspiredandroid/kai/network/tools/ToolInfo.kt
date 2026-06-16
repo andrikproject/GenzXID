@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.tools
+package com.genzxid.app.network.tools
 
 import androidx.compose.runtime.Immutable
 import org.jetbrains.compose.resources.StringResource

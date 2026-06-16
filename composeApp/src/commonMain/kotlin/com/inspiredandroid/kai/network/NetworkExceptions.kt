@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.network
+package com.genzxid.app.network
 
-import com.inspiredandroid.kai.inference.InferenceTimeoutException
-import com.inspiredandroid.kai.inference.InsufficientMemoryException
-import com.inspiredandroid.kai.inference.NoModelDownloadedException
+import com.genzxid.app.inference.InferenceTimeoutException
+import com.genzxid.app.inference.InsufficientMemoryException
+import com.genzxid.app.inference.NoModelDownloadedException
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.error_all_services_failed
 import kai.composeapp.generated.resources.error_bad_request

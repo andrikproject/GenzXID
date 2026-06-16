@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.network.UiError
+import com.genzxid.app.network.UiError
 
 /**
  * Emitted while [DataRepository.ask] walks the configured fallback chain. Only set when a

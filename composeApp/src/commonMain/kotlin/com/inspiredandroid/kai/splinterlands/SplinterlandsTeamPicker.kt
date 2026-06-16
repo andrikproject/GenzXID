@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject

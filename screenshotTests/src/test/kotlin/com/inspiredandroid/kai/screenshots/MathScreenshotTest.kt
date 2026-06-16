@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,10 +17,10 @@ import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
 import com.android.ide.common.rendering.api.SessionParams
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.LightColorScheme
-import com.inspiredandroid.kai.ui.Theme
-import com.inspiredandroid.kai.ui.markdown.MarkdownContent
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.LightColorScheme
+import com.genzxid.app.ui.Theme
+import com.genzxid.app.ui.markdown.MarkdownContent
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.setResourceReaderAndroidContext
 import org.junit.Before
@@ -29,7 +29,7 @@ import org.junit.Test
 
 /**
  * Screenshot tests for the LaTeX math rendering feature (issue #150). Each test packs multiple
- * related formulas into one card so the kai9000.com landing-page PNGs use their full vertical
+ * related formulas into one card so the genzxid.com landing-page PNGs use their full vertical
  * space. Snapshots are copied to site/img/math-*.png by the updateScreenshots Gradle task.
  */
 @OptIn(ExperimentalResourceApi::class)

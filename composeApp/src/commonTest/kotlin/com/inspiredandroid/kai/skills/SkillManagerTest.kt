@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
-import com.inspiredandroid.kai.testutil.FakeSandboxController
+import com.genzxid.app.testutil.FakeSandboxController
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest

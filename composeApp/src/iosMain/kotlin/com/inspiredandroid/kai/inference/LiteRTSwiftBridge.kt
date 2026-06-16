@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 /**
  * Bridge to the LiteRT-LM Swift SDK (SPM package `github.com/google-ai-edge/LiteRT-LM`).

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.dtos
+package com.genzxid.app.network.dtos
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.Serializable

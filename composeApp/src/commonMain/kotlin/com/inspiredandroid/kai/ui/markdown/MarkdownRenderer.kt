@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
@@ -25,9 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.inspiredandroid.kai.ui.dynamicui.FrozenSubmission
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiRenderer
-import com.inspiredandroid.kai.ui.markdown.math.MathFormula
+import com.genzxid.app.ui.dynamicui.FrozenSubmission
+import com.genzxid.app.ui.dynamicui.KaiUiRenderer
+import com.genzxid.app.ui.markdown.math.MathFormula
 import kotlinx.collections.immutable.persistentListOf
 
 /**
@@ -64,7 +64,7 @@ fun MarkdownContent(
 ) {
     val doc = remember(content) {
         runCatching { parseMarkdown(content) }.getOrElse {
-            MarkdownDocument(persistentListOf(Paragraph(persistentListOf(com.inspiredandroid.kai.ui.markdown.Text(content)))))
+            MarkdownDocument(persistentListOf(Paragraph(persistentListOf(com.genzxid.app.ui.markdown.Text(content)))))
         }
     }
     MarkdownContent(doc, modifier, isInteractive, onUiCallback, frozen)

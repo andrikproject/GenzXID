@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
-import com.inspiredandroid.kai.data.SmsMessage
+import com.genzxid.app.data.SmsMessage
 
 actual class SmsReader actual constructor() {
     actual fun isSupported(): Boolean = false

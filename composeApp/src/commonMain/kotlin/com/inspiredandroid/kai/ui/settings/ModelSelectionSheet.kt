@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -37,12 +37,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.formatContextWindow
-import com.inspiredandroid.kai.formatReleaseDate
-import com.inspiredandroid.kai.ui.KaiOutlinedTextField
-import com.inspiredandroid.kai.ui.components.KaiSearchField
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForGrid
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.formatContextWindow
+import com.genzxid.app.formatReleaseDate
+import com.genzxid.app.ui.KaiOutlinedTextField
+import com.genzxid.app.ui.components.KaiSearchField
+import com.genzxid.app.ui.components.VerticalScrollbarForGrid
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.ic_arrow_drop_down
 import kai.composeapp.generated.resources.model_sort_context

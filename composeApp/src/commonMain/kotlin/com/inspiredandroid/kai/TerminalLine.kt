@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.SerialName

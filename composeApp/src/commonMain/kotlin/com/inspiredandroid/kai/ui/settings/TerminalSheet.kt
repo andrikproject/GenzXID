@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.awaitEachGesture
@@ -55,12 +55,12 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.CommandHandle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxSessions
-import com.inspiredandroid.kai.TerminalLine
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.sandbox.SandboxSessionViewModel
+import com.genzxid.app.CommandHandle
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxSessions
+import com.genzxid.app.TerminalLine
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.sandbox.SandboxSessionViewModel
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.terminal_help_text
 import kai.composeapp.generated.resources.terminal_input_placeholder

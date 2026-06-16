@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.sandbox.LinuxSandboxManager
+import com.genzxid.app.sandbox.LinuxSandboxManager
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger

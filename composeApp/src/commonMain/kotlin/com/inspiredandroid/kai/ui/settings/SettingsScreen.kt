@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -105,44 +105,44 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.BackIcon
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.Version
-import com.inspiredandroid.kai.data.EmailAccount
-import com.inspiredandroid.kai.data.HeartbeatLogEntry
-import com.inspiredandroid.kai.data.ImportSection
-import com.inspiredandroid.kai.data.MemoryEntry
-import com.inspiredandroid.kai.data.ScheduledTask
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.SharedJson
-import com.inspiredandroid.kai.data.TaskStatus
-import com.inspiredandroid.kai.data.TaskTrigger
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.data.detectImportSections
-import com.inspiredandroid.kai.formatFileSize
-import com.inspiredandroid.kai.inference.DevicePerformance
-import com.inspiredandroid.kai.inference.DownloadError
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.inference.calculateDevicePerformance
-import com.inspiredandroid.kai.inference.estimateGpuMemoryMb
-import com.inspiredandroid.kai.mcp.PopularMcpServer
-import com.inspiredandroid.kai.network.dtos.SponsorsResponseDto
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.saveFileToDevice
-import com.inspiredandroid.kai.ui.KaiClearableTextField
-import com.inspiredandroid.kai.ui.KaiOutlinedTextField
-import com.inspiredandroid.kai.ui.components.KaiSlider
-import com.inspiredandroid.kai.ui.components.SettingsListItem
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForScroll
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.icons.DragIndicator
-import com.inspiredandroid.kai.ui.icons.Replay
-import com.inspiredandroid.kai.ui.icons.Visibility
-import com.inspiredandroid.kai.ui.icons.VisibilityOff
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardBorder
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardColors
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardSurface
-import com.inspiredandroid.kai.ui.sandbox.SandboxProgressRow
+import com.genzxid.app.BackIcon
+import com.genzxid.app.SandboxController
+import com.genzxid.app.Version
+import com.genzxid.app.data.EmailAccount
+import com.genzxid.app.data.HeartbeatLogEntry
+import com.genzxid.app.data.ImportSection
+import com.genzxid.app.data.MemoryEntry
+import com.genzxid.app.data.ScheduledTask
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.SharedJson
+import com.genzxid.app.data.TaskStatus
+import com.genzxid.app.data.TaskTrigger
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.data.detectImportSections
+import com.genzxid.app.formatFileSize
+import com.genzxid.app.inference.DevicePerformance
+import com.genzxid.app.inference.DownloadError
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.inference.calculateDevicePerformance
+import com.genzxid.app.inference.estimateGpuMemoryMb
+import com.genzxid.app.mcp.PopularMcpServer
+import com.genzxid.app.network.dtos.SponsorsResponseDto
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.saveFileToDevice
+import com.genzxid.app.ui.KaiClearableTextField
+import com.genzxid.app.ui.KaiOutlinedTextField
+import com.genzxid.app.ui.components.KaiSlider
+import com.genzxid.app.ui.components.SettingsListItem
+import com.genzxid.app.ui.components.VerticalScrollbarForScroll
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.icons.DragIndicator
+import com.genzxid.app.ui.icons.Replay
+import com.genzxid.app.ui.icons.Visibility
+import com.genzxid.app.ui.icons.VisibilityOff
+import com.genzxid.app.ui.kaiAdaptiveCardBorder
+import com.genzxid.app.ui.kaiAdaptiveCardColors
+import com.genzxid.app.ui.kaiAdaptiveCardSurface
+import com.genzxid.app.ui.sandbox.SandboxProgressRow
 import io.github.vinceglb.filekit.dialogs.FileKitType
 import io.github.vinceglb.filekit.dialogs.compose.rememberFilePickerLauncher
 import io.github.vinceglb.filekit.readBytes
@@ -645,7 +645,7 @@ private fun BottomInfo() {
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier
-                .clickable { uriHandler.openUri("https://kai9000.com/docs/") }
+                .clickable { uriHandler.openUri("https://genzxid.com/docs/") }
                 .handCursor(),
         )
     }

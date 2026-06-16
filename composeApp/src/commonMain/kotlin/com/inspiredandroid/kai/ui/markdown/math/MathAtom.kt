@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.markdown.math
+package com.genzxid.app.ui.markdown.math
 
 import androidx.compose.runtime.Immutable
 import kotlinx.collections.immutable.ImmutableList

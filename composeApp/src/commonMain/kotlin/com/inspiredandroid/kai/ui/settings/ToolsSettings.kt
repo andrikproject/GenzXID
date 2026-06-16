@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -22,13 +22,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.mcp.PopularMcpServer
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.skills.RegistrySkillEntry
-import com.inspiredandroid.kai.skills.SkillManifest
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardBorder
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardColors
+import com.genzxid.app.mcp.PopularMcpServer
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.skills.RegistrySkillEntry
+import com.genzxid.app.skills.SkillManifest
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.kaiAdaptiveCardBorder
+import com.genzxid.app.ui.kaiAdaptiveCardColors
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.settings_tools_description
 import kai.composeapp.generated.resources.settings_tools_none_available

@@ -1,15 +1,15 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.inference.DownloadError
-import com.inspiredandroid.kai.inference.DownloadedModel
-import com.inspiredandroid.kai.inference.EngineState
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.mcp.McpServerConfig
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.skills.RegistrySkillEntry
-import com.inspiredandroid.kai.skills.SkillManifest
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.settings.SettingsModel
+import com.genzxid.app.inference.DownloadError
+import com.genzxid.app.inference.DownloadedModel
+import com.genzxid.app.inference.EngineState
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.mcp.McpServerConfig
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.skills.RegistrySkillEntry
+import com.genzxid.app.skills.SkillManifest
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.settings.SettingsModel
 import io.github.vinceglb.filekit.PlatformFile
 import kotlinx.coroutines.flow.StateFlow
 

@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -64,22 +64,22 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.formatFileSize
-import com.inspiredandroid.kai.inference.DevicePerformance
-import com.inspiredandroid.kai.inference.DownloadError
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.inference.calculateDevicePerformance
-import com.inspiredandroid.kai.inference.estimateGpuMemoryMb
-import com.inspiredandroid.kai.network.dtos.SponsorsResponseDto
-import com.inspiredandroid.kai.ui.KaiClearableTextField
-import com.inspiredandroid.kai.ui.components.KaiSlider
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForScroll
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.icons.DragIndicator
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardBorder
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardColors
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardSurface
+import com.genzxid.app.data.Service
+import com.genzxid.app.formatFileSize
+import com.genzxid.app.inference.DevicePerformance
+import com.genzxid.app.inference.DownloadError
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.inference.calculateDevicePerformance
+import com.genzxid.app.inference.estimateGpuMemoryMb
+import com.genzxid.app.network.dtos.SponsorsResponseDto
+import com.genzxid.app.ui.KaiClearableTextField
+import com.genzxid.app.ui.components.KaiSlider
+import com.genzxid.app.ui.components.VerticalScrollbarForScroll
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.icons.DragIndicator
+import com.genzxid.app.ui.kaiAdaptiveCardBorder
+import com.genzxid.app.ui.kaiAdaptiveCardColors
+import com.genzxid.app.ui.kaiAdaptiveCardSurface
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.ic_arrow_drop_down
 import kai.composeapp.generated.resources.litert_cancel

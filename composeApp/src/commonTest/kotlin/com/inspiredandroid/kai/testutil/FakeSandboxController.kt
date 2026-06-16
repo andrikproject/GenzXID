@@ -1,17 +1,17 @@
-package com.inspiredandroid.kai.testutil
+package com.genzxid.app.testutil
 
-import com.inspiredandroid.kai.CommandHandle
-import com.inspiredandroid.kai.NoOpCommandHandle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxFileEntry
-import com.inspiredandroid.kai.SandboxStatus
+import com.genzxid.app.CommandHandle
+import com.genzxid.app.NoOpCommandHandle
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxFileEntry
+import com.genzxid.app.SandboxStatus
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 /**
  * In-memory [SandboxController] for tests. Backs the file ops with a flat
  * path→content map (directories are implicit from path prefixes), which is all
- * [com.inspiredandroid.kai.skills.SkillManager] needs to store and read skills.
+ * [com.genzxid.app.skills.SkillManager] needs to store and read skills.
  */
 class FakeSandboxController(installed: Boolean = true) : SandboxController {
 

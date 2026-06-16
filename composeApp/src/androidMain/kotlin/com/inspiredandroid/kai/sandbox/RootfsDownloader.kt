@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import io.ktor.client.HttpClient
 import io.ktor.client.request.prepareGet

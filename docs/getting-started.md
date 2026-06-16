@@ -5,8 +5,8 @@
 ### App Stores
 
 - [**App Store**](https://apps.apple.com/us/app/kai-ai/id6758148023) (iOS)
-- [**Google Play**](https://play.google.com/store/apps/details?id=com.inspiredandroid.kai) (Android)
-- [**F-Droid**](https://f-droid.org/en/packages/com.inspiredandroid.kai/) (Android)
+- [**Google Play**](https://play.google.com/store/apps/details?id=com.genzxid.app) (Android)
+- [**F-Droid**](https://f-droid.org/en/packages/com.genzxid.app/) (Android)
 
 ### Web
 

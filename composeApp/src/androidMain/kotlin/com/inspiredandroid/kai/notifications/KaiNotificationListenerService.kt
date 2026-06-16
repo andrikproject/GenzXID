@@ -1,13 +1,13 @@
-package com.inspiredandroid.kai.notifications
+package com.genzxid.app.notifications
 
 import android.app.Notification
 import android.content.pm.PackageManager
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.NotificationRecord
-import com.inspiredandroid.kai.data.NotificationStore
-import com.inspiredandroid.kai.data.NotificationSyncState
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.NotificationRecord
+import com.genzxid.app.data.NotificationStore
+import com.genzxid.app.data.NotificationSyncState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

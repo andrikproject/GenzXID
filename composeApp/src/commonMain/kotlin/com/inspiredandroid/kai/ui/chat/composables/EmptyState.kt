@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -25,9 +25,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.ui.components.LogoAnimation
-import com.inspiredandroid.kai.ui.components.animatedGradientBorder
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.ui.components.LogoAnimation
+import com.genzxid.app.ui.components.animatedGradientBorder
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.privacy_agree_prefix
 import kai.composeapp.generated.resources.privacy_policy

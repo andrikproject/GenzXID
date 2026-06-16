@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 import android.app.ActivityManager
 import android.app.NotificationManager
@@ -48,7 +48,7 @@ actual fun updateDownloadNotificationProgress(percent: Int) {
         val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val builder = android.app.Notification.Builder(context, "kai_model_download_channel")
         val notification = builder
-            .setContentTitle(context.getString(com.inspiredandroid.kai.shared.R.string.app_name))
+            .setContentTitle(context.getString(com.genzxid.app.shared.R.string.app_name))
             .setContentText("$percent%")
             .setSmallIcon(android.R.drawable.stat_sys_download)
             .setOngoing(true)

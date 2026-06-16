@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.inspiredandroid.kai.screenshots"
+    namespace = "com.genzxid.app.screenshots"
     compileSdk =
         libs.versions.android.compileSdk
             .get()

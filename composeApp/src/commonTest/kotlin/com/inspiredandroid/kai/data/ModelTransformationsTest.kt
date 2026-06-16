@@ -1,9 +1,9 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.network.dtos.anthropic.AnthropicModelsResponseDto
-import com.inspiredandroid.kai.network.dtos.gemini.GeminiModelsResponseDto
-import com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleModelResponseDto
-import com.inspiredandroid.kai.ui.settings.SettingsModel
+import com.genzxid.app.network.dtos.anthropic.AnthropicModelsResponseDto
+import com.genzxid.app.network.dtos.gemini.GeminiModelsResponseDto
+import com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleModelResponseDto
+import com.genzxid.app.ui.settings.SettingsModel
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

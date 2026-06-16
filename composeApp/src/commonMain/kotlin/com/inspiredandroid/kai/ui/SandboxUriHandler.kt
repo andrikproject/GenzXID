@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.ui
+package com.genzxid.app.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
-import com.inspiredandroid.kai.SandboxController
+import com.genzxid.app.SandboxController
 import io.ktor.http.decodeURLPart
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch

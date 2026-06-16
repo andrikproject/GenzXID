@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_APP_OPENS
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_BASE_URL_V1_MIGRATION_COMPLETE
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_CURRENT_SERVICE_ID
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_INSTANCE_MIGRATION_COMPLETE
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_MIGRATION_COMPLETE
-import com.inspiredandroid.kai.data.AppSettings.Companion.KEY_SERVICES_MIGRATION_COMPLETE
+import com.genzxid.app.data.AppSettings.Companion.KEY_APP_OPENS
+import com.genzxid.app.data.AppSettings.Companion.KEY_BASE_URL_V1_MIGRATION_COMPLETE
+import com.genzxid.app.data.AppSettings.Companion.KEY_CURRENT_SERVICE_ID
+import com.genzxid.app.data.AppSettings.Companion.KEY_INSTANCE_MIGRATION_COMPLETE
+import com.genzxid.app.data.AppSettings.Companion.KEY_MIGRATION_COMPLETE
+import com.genzxid.app.data.AppSettings.Companion.KEY_SERVICES_MIGRATION_COMPLETE
 import com.russhwolf.settings.Settings
 
 internal val versionPathRegex = Regex("/v\\d+$")

@@ -1,10 +1,10 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.ui.draganddrop.DragAndDropEvent
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
 import com.russhwolf.settings.Settings
 import io.github.vinceglb.filekit.PlatformFile
 import io.ktor.client.HttpClient

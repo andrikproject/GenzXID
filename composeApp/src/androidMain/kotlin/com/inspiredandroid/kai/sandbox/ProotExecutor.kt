@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
-import com.inspiredandroid.kai.smartTruncate
+import com.genzxid.app.smartTruncate
 import java.io.BufferedReader
 import java.io.File
 import java.io.IOException

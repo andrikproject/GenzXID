@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.DaemonController
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.testutil.FakeDataRepository
-import com.inspiredandroid.kai.tools.NotificationPermissionController
+import com.genzxid.app.DaemonController
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.testutil.FakeDataRepository
+import com.genzxid.app.tools.NotificationPermissionController
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher

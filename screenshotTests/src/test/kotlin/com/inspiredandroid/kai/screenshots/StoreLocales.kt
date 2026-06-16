@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 object StoreLocales {
     val all = listOf(

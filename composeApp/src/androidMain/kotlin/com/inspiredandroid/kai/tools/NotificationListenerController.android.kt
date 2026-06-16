@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 import android.app.NotificationManager
 import android.content.ComponentName
@@ -6,11 +6,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.provider.Settings
-import com.inspiredandroid.kai.notifications.declaresNotificationListener
+import com.genzxid.app.notifications.declaresNotificationListener
 import org.koin.java.KoinJavaComponent.inject
 
 private const val NOTIFICATION_LISTENER_FQN =
-    "com.inspiredandroid.kai.notifications.KaiNotificationListenerService"
+    "com.genzxid.app.notifications.KaiNotificationListenerService"
 
 actual class NotificationListenerController actual constructor() {
     private val context: Context by inject(Context::class.java)

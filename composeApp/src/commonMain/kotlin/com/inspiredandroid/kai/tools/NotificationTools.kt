@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.NotificationRecord
-import com.inspiredandroid.kai.data.NotificationStore
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.notifications.NotificationReader
+import com.genzxid.app.data.NotificationRecord
+import com.genzxid.app.data.NotificationStore
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.notifications.NotificationReader
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tool_check_notifications_description
 import kai.composeapp.generated.resources.tool_check_notifications_name

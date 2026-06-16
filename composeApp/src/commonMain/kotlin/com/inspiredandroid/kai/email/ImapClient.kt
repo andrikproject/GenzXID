@@ -1,9 +1,9 @@
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
-import com.inspiredandroid.kai.data.EmailMessage
-import com.inspiredandroid.kai.tools.decodeHtmlEntities
+import com.genzxid.app.data.EmailMessage
+import com.genzxid.app.tools.decodeHtmlEntities
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
 

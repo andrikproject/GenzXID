@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalVoiceApi::class)
 
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 import kotlinx.coroutines.flow.StateFlow
 import nl.marc_apps.tts.TextToSpeechInstance

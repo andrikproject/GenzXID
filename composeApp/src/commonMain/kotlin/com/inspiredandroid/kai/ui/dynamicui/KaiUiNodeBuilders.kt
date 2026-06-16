@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.dynamicui
+package com.genzxid.app.ui.dynamicui
 
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf

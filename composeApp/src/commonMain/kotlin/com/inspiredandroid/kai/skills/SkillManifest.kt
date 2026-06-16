@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
 /**
  * An installed skill, read from its folder in the Linux sandbox at

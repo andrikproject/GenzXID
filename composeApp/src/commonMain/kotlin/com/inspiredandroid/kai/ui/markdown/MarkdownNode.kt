@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
 import androidx.compose.runtime.Immutable
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiNode
+import com.genzxid.app.ui.dynamicui.KaiUiNode
 import kotlinx.collections.immutable.ImmutableList
 
 @Immutable

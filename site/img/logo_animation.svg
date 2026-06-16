@@ -1,18 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 52" width="104" height="52">
-  <circle r="26" cy="26" fill="#582FB7" opacity="1">
-    <animate attributeName="cx" values="78;26;78" dur="1.534s" repeatCount="indefinite"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
-    <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" dur="1.534s"
-             repeatCount="indefinite" calcMode="discrete"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="95" fill="url(#grad)"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#06B6D4" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- G logo -->
+  <path d="M 65 110 A 35 35 0 1 0 100 65 L 100 80 L 115 80 L 115 100 L 100 100" 
+        fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Animated dots -->
+  <circle cx="72" cy="72" r="2.5" fill="#06B6D4">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle r="26" cy="26" fill="#8063C5">
-    <animate attributeName="cx" values="26;78;26" dur="1.534s" repeatCount="indefinite"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+  <circle cx="125" cy="72" r="2.5" fill="#06B6D4">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle r="26" cy="26" fill="#582FB7" opacity="0">
-    <animate attributeName="cx" values="78;26;78" dur="1.534s" repeatCount="indefinite"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
-    <animate attributeName="opacity" values="0;1" keyTimes="0;0.5" dur="1.534s"
-             repeatCount="indefinite" calcMode="discrete"/>
+  <circle cx="130" cy="125" r="2.5" fill="#06B6D4">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" cy="128" r="2.5" fill="#06B6D4">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3s" begin="1s" repeatCount="indefinite"/>
   </circle>
 </svg>

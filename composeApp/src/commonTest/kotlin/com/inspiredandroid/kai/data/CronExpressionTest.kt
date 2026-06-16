@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime

@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -37,14 +37,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.HeartbeatLogEntry
-import com.inspiredandroid.kai.data.MemoryEntry
-import com.inspiredandroid.kai.data.ScheduledTask
-import com.inspiredandroid.kai.data.TaskTrigger
-import com.inspiredandroid.kai.ui.KaiOutlinedTextField
-import com.inspiredandroid.kai.ui.components.SettingsListItem
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.icons.Replay
+import com.genzxid.app.data.HeartbeatLogEntry
+import com.genzxid.app.data.MemoryEntry
+import com.genzxid.app.data.ScheduledTask
+import com.genzxid.app.data.TaskTrigger
+import com.genzxid.app.ui.KaiOutlinedTextField
+import com.genzxid.app.ui.components.SettingsListItem
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.icons.Replay
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.default_soul
 import kai.composeapp.generated.resources.settings_heartbeat_recent

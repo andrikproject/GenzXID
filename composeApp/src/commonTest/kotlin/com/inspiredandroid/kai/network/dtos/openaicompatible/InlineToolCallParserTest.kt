@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.network.dtos.openaicompatible
+package com.genzxid.app.network.dtos.openaicompatible
 
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolSchema
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolSchema
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

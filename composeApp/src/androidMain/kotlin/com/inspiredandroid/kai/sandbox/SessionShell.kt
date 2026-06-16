@@ -1,9 +1,9 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.Snapshot
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import com.inspiredandroid.kai.TerminalLine
+import com.genzxid.app.TerminalLine
 
 private const val MAX_TRANSCRIPT_LINES = 500
 

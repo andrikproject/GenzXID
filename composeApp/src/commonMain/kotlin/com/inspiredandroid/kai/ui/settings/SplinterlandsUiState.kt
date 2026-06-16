@@ -1,9 +1,9 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.runtime.Immutable
-import com.inspiredandroid.kai.data.ServiceEntry
-import com.inspiredandroid.kai.splinterlands.BattleLogEntry
-import com.inspiredandroid.kai.splinterlands.BattleStatus
+import com.genzxid.app.data.ServiceEntry
+import com.genzxid.app.splinterlands.BattleLogEntry
+import com.genzxid.app.splinterlands.BattleStatus
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 

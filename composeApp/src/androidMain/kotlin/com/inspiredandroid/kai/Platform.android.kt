@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.content.Context
 import android.content.Intent
@@ -11,43 +11,43 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.core.graphics.scale
 import androidx.core.net.toUri
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.EmailStore
-import com.inspiredandroid.kai.data.MemoryStore
-import com.inspiredandroid.kai.data.NotificationStore
-import com.inspiredandroid.kai.data.SmsDraftStore
-import com.inspiredandroid.kai.data.SmsStore
-import com.inspiredandroid.kai.data.TaskStore
-import com.inspiredandroid.kai.mcp.McpServerManager
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
-import com.inspiredandroid.kai.notifications.NotificationReader
-import com.inspiredandroid.kai.notifications.declaresNotificationListener
-import com.inspiredandroid.kai.sandbox.LinuxSandboxManager
-import com.inspiredandroid.kai.sandbox.SandboxState
-import com.inspiredandroid.kai.sms.SmsReader
-import com.inspiredandroid.kai.sms.SmsSender
-import com.inspiredandroid.kai.sms.declaresReadSms
-import com.inspiredandroid.kai.tools.CalendarPermissionController
-import com.inspiredandroid.kai.tools.CalendarRepository
-import com.inspiredandroid.kai.tools.CalendarResult
-import com.inspiredandroid.kai.tools.CommonTools
-import com.inspiredandroid.kai.tools.EmailTools
-import com.inspiredandroid.kai.tools.FetchUrlTool
-import com.inspiredandroid.kai.tools.HeartbeatTools
-import com.inspiredandroid.kai.tools.NotificationHelper
-import com.inspiredandroid.kai.tools.NotificationPermissionController
-import com.inspiredandroid.kai.tools.NotificationResult
-import com.inspiredandroid.kai.tools.NotificationTools
-import com.inspiredandroid.kai.tools.OpenFileTool
-import com.inspiredandroid.kai.tools.ProcessManagerTool
-import com.inspiredandroid.kai.tools.SchedulingTools
-import com.inspiredandroid.kai.tools.ShellCommandTool
-import com.inspiredandroid.kai.tools.SmsTools
-import com.inspiredandroid.kai.tools.SshConfigureHostTool
-import com.inspiredandroid.kai.tools.WebSearchTool
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.EmailStore
+import com.genzxid.app.data.MemoryStore
+import com.genzxid.app.data.NotificationStore
+import com.genzxid.app.data.SmsDraftStore
+import com.genzxid.app.data.SmsStore
+import com.genzxid.app.data.TaskStore
+import com.genzxid.app.mcp.McpServerManager
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
+import com.genzxid.app.notifications.NotificationReader
+import com.genzxid.app.notifications.declaresNotificationListener
+import com.genzxid.app.sandbox.LinuxSandboxManager
+import com.genzxid.app.sandbox.SandboxState
+import com.genzxid.app.sms.SmsReader
+import com.genzxid.app.sms.SmsSender
+import com.genzxid.app.sms.declaresReadSms
+import com.genzxid.app.tools.CalendarPermissionController
+import com.genzxid.app.tools.CalendarRepository
+import com.genzxid.app.tools.CalendarResult
+import com.genzxid.app.tools.CommonTools
+import com.genzxid.app.tools.EmailTools
+import com.genzxid.app.tools.FetchUrlTool
+import com.genzxid.app.tools.HeartbeatTools
+import com.genzxid.app.tools.NotificationHelper
+import com.genzxid.app.tools.NotificationPermissionController
+import com.genzxid.app.tools.NotificationResult
+import com.genzxid.app.tools.NotificationTools
+import com.genzxid.app.tools.OpenFileTool
+import com.genzxid.app.tools.ProcessManagerTool
+import com.genzxid.app.tools.SchedulingTools
+import com.genzxid.app.tools.ShellCommandTool
+import com.genzxid.app.tools.SmsTools
+import com.genzxid.app.tools.SshConfigureHostTool
+import com.genzxid.app.tools.WebSearchTool
 import com.russhwolf.settings.BuildConfig
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.SharedPreferencesSettings
@@ -175,7 +175,7 @@ private fun createEncryptedPrefs(context: Context): android.content.SharedPrefer
 
 actual fun createLegacySettings(): Settings? {
     val context: Context by inject(Context::class.java)
-    val prefs = context.getSharedPreferences("com.inspiredandroid.kai_preferences", Context.MODE_PRIVATE)
+    val prefs = context.getSharedPreferences("com.genzxid.app_preferences", Context.MODE_PRIVATE)
     return SharedPreferencesSettings(prefs)
 }
 
@@ -269,7 +269,7 @@ actual fun getAvailableTools(): List<Tool> {
                     )
 
                     override suspend fun execute(args: Map<String, Any>): Any {
-                        val title = args["title"] as? String ?: "Kai 9000"
+                        val title = args["title"] as? String ?: "GenzXID"
                         val message = args["message"] as? String
                             ?: return mapOf("success" to false, "error" to "Message is required")
 

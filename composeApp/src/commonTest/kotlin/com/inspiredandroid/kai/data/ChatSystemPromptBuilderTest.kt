@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -67,7 +67,7 @@ class ChatSystemPromptBuilderTest {
         heartbeatAdditions: List<ScheduledTask> = emptyList(),
         emailAccounts: List<EmailAccountSummary> = emptyList(),
         uiMode: ChatPromptUiMode = ChatPromptUiMode.NONE,
-        activeSkill: com.inspiredandroid.kai.skills.SkillManifest? = null,
+        activeSkill: com.genzxid.app.skills.SkillManifest? = null,
     ) = buildChatSystemPrompt(
         variant = variant,
         soul = soul,
@@ -91,7 +91,7 @@ class ChatSystemPromptBuilderTest {
         id: String = "pdf-tools",
         body: String = "Extract text from PDFs.",
         bundledFilePaths: List<String> = emptyList(),
-    ) = com.inspiredandroid.kai.skills.SkillManifest(
+    ) = com.genzxid.app.skills.SkillManifest(
         id = id,
         displayName = id,
         description = "desc",

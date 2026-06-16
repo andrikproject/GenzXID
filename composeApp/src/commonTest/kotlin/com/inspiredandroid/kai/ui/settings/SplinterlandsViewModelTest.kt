@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.DaemonController
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.splinterlands.SplinterlandsApi
-import com.inspiredandroid.kai.splinterlands.SplinterlandsBattleRunner
-import com.inspiredandroid.kai.splinterlands.SplinterlandsStore
-import com.inspiredandroid.kai.testutil.FakeDataRepository
+import com.genzxid.app.DaemonController
+import com.genzxid.app.data.Service
+import com.genzxid.app.splinterlands.SplinterlandsApi
+import com.genzxid.app.splinterlands.SplinterlandsBattleRunner
+import com.genzxid.app.splinterlands.SplinterlandsStore
+import com.genzxid.app.testutil.FakeDataRepository
 import com.russhwolf.settings.MapSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -32,7 +32,7 @@ class SplinterlandsViewModelTest {
     fun setup() {
         Dispatchers.setMain(testDispatcher)
         fakeRepository = FakeDataRepository()
-        val testSettings = com.inspiredandroid.kai.data.AppSettings(MapSettings())
+        val testSettings = com.genzxid.app.data.AppSettings(MapSettings())
         fakeSplinterlandsStore = SplinterlandsStore(testSettings)
         fakeSplinterlandsBattleRunner = SplinterlandsBattleRunner(
             fakeSplinterlandsStore,

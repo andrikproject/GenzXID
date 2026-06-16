@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -6,7 +6,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import com.inspiredandroid.kai.shared.R
+import com.genzxid.app.shared.R
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.notification_channel_description
 import kai.composeapp.generated.resources.notification_channel_name
@@ -19,7 +19,7 @@ import org.koin.java.KoinJavaComponent.inject
  * receiver forwards the signal to `DataRepository.requestOpenHeartbeat()` so the
  * ChatViewModel observer can load the heartbeat conversation.
  */
-const val EXTRA_OPEN_HEARTBEAT = "com.inspiredandroid.kai.OPEN_HEARTBEAT"
+const val EXTRA_OPEN_HEARTBEAT = "com.genzxid.app.OPEN_HEARTBEAT"
 
 /** Shared with the AI `send_notification` tool — ensures the channel is created once. */
 private const val CHANNEL_ID = "kai_ai_notifications"

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.components
+package com.genzxid.app.ui.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardSurface
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.kaiAdaptiveCardSurface
 
 @Composable
 fun SettingsListItem(

@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import androidx.compose.runtime.Immutable
-import com.inspiredandroid.kai.TerminalLine
+import com.genzxid.app.TerminalLine
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable

@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 val MODEL_CATALOG = listOf(
     LocalModel(

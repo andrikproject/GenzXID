@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kai9000.com/sitemap.xml
-Sitemap: https://kai9000.com/docs/sitemap.xml
+Sitemap: https://genzxid.com/sitemap.xml
+Sitemap: https://genzxid.com/docs/sitemap.xml

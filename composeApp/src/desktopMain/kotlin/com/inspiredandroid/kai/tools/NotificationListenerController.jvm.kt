@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 actual class NotificationListenerController actual constructor() {
     actual fun isSupported(): Boolean = false

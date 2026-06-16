@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
 /**
  * Platform-specific TCP/TLS connection for email protocols.

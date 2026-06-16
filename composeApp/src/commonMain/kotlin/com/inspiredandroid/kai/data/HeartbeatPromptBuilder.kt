@@ -4,7 +4,7 @@
 // every input is explicit so tests can call it directly with hand-crafted inputs.
 // The heartbeat prompt is a single shape — always sent as a user message.
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
 import kotlin.time.Instant
 

@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -44,11 +44,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.ui.chat.ChatActions
-import com.inspiredandroid.kai.ui.chat.ConversationSummary
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForList
-import com.inspiredandroid.kai.ui.components.animatedGradientBorder
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.ui.chat.ChatActions
+import com.genzxid.app.ui.chat.ConversationSummary
+import com.genzxid.app.ui.components.VerticalScrollbarForList
+import com.genzxid.app.ui.components.animatedGradientBorder
+import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.chat_history_delete_content_description
 import kai.composeapp.generated.resources.chat_history_empty

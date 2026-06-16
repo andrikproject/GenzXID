@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.content.Intent
 import android.os.Build
@@ -21,11 +21,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.DataRepository
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.LightColorScheme
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.DataRepository
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.LightColorScheme
 import io.github.vinceglb.filekit.FileKit
 import io.github.vinceglb.filekit.dialogs.init
 import nl.marc_apps.tts.TextToSpeechEngine

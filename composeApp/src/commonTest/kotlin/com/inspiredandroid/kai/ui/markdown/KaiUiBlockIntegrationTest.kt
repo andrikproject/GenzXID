@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
-import com.inspiredandroid.kai.ui.dynamicui.AlertNode
-import com.inspiredandroid.kai.ui.dynamicui.ColumnNode
+import com.genzxid.app.ui.dynamicui.AlertNode
+import com.genzxid.app.ui.dynamicui.ColumnNode
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

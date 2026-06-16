@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.finetuning
+package com.genzxid.app.finetuning
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

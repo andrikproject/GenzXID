@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.components
+package com.genzxid.app.ui.components
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloat
@@ -17,9 +17,9 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.ui.gradientMagenta
-import com.inspiredandroid.kai.ui.gradientPurple
-import com.inspiredandroid.kai.ui.gradientViolet
+import com.genzxid.app.ui.gradientMagenta
+import com.genzxid.app.ui.gradientPurple
+import com.genzxid.app.ui.gradientViolet
 
 private const val STOP_A = 0f
 private const val STOP_B = 0.33f

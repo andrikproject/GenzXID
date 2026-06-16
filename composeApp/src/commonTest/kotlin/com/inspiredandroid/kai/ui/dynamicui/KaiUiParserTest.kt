@@ -1,9 +1,9 @@
-package com.inspiredandroid.kai.ui.dynamicui
+package com.genzxid.app.ui.dynamicui
 
-import com.inspiredandroid.kai.ui.markdown.KaiUiBlock
-import com.inspiredandroid.kai.ui.markdown.KaiUiError
-import com.inspiredandroid.kai.ui.markdown.Paragraph
-import com.inspiredandroid.kai.ui.markdown.parseMarkdown
+import com.genzxid.app.ui.markdown.KaiUiBlock
+import com.genzxid.app.ui.markdown.KaiUiError
+import com.genzxid.app.ui.markdown.Paragraph
+import com.genzxid.app.ui.markdown.parseMarkdown
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

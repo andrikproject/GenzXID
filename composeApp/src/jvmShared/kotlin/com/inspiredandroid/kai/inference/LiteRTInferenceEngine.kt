@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
 import com.google.ai.edge.litertlm.Backend
 import com.google.ai.edge.litertlm.Contents

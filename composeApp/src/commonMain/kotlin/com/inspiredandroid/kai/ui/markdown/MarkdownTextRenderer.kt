@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
-import com.inspiredandroid.kai.ui.dynamicui.collectSpeakableText
+import com.genzxid.app.ui.dynamicui.collectSpeakableText
 
 /**
  * TTS-friendly text extracted from a parsed [MarkdownDocument]. Strips markdown formatting,

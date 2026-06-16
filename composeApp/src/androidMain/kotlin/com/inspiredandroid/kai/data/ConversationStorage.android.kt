@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.getAppFilesDirectory
+import com.genzxid.app.getAppFilesDirectory
 import java.io.File
 
 private const val LEGACY_FILE_NAME = "conversations.enc"

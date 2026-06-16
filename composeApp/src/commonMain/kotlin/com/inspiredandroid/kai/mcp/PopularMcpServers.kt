@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.mcp
+package com.genzxid.app.mcp
 
 import androidx.compose.runtime.Immutable
 

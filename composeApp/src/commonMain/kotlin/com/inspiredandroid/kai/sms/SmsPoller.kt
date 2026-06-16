@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.sms
+package com.genzxid.app.sms
 
-import com.inspiredandroid.kai.data.SmsStore
+import com.genzxid.app.data.SmsStore
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 

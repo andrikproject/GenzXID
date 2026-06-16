@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.skills.SkillManifest
-import com.inspiredandroid.kai.testutil.FakeDataRepository
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.skills.SkillManifest
+import com.genzxid.app.testutil.FakeDataRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher

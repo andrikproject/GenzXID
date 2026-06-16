@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.ui.dynamicui
+package com.genzxid.app.ui.dynamicui
 
-import com.inspiredandroid.kai.ui.markdown.parseMarkdown
-import com.inspiredandroid.kai.ui.markdown.toSpeakableText
+import com.genzxid.app.ui.markdown.parseMarkdown
+import com.genzxid.app.ui.markdown.toSpeakableText
 
 /**
  * TTS-friendly text for a message that may contain kai-ui fences. Routed through the unified

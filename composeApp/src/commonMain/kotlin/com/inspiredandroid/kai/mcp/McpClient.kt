@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.mcp
+package com.genzxid.app.mcp
 
-import com.inspiredandroid.kai.httpClient
+import com.genzxid.app.httpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.request.header
@@ -95,7 +95,7 @@ class McpClient(
             put(
                 "clientInfo",
                 buildJsonObject {
-                    put("name", JsonPrimitive("Kai 9000"))
+                    put("name", JsonPrimitive("GenzXID"))
                     put("version", JsonPrimitive("1.0"))
                 },
             )

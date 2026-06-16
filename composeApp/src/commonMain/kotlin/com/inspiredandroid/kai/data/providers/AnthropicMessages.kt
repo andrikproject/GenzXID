@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.data.providers
+package com.genzxid.app.data.providers
 
-import com.inspiredandroid.kai.network.dtos.anthropic.AnthropicChatRequestDto
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.chat.toAnthropicContentBlocks
+import com.genzxid.app.network.dtos.anthropic.AnthropicChatRequestDto
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.chat.toAnthropicContentBlocks
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 

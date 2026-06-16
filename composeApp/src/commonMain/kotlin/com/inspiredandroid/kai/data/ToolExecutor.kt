@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.getAvailableTools
-import com.inspiredandroid.kai.getPlatformToolDefinitions
-import com.inspiredandroid.kai.smartTruncate
+import com.genzxid.app.getAvailableTools
+import com.genzxid.app.getPlatformToolDefinitions
+import com.genzxid.app.smartTruncate
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout

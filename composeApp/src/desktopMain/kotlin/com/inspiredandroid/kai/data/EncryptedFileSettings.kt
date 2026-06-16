@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.getAppFilesDirectory
+import com.genzxid.app.getAppFilesDirectory
 import com.russhwolf.settings.Settings
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -64,7 +64,7 @@ class EncryptedFileSettings : Settings {
 
     private fun migrateFromPreferences() {
         try {
-            val prefs = java.util.prefs.Preferences.userRoot().node("com.inspiredandroid.kai")
+            val prefs = java.util.prefs.Preferences.userRoot().node("com.genzxid.app")
             for (key in prefs.keys()) {
                 map[key] = prefs.get(key, "")
             }

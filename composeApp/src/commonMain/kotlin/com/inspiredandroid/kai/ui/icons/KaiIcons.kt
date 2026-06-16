@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.icons
+package com.genzxid.app.ui.icons
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.materialIcon

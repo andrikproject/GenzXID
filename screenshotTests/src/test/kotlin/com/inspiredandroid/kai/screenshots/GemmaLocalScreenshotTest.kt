@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalVoiceApi::class)
 
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -29,19 +29,19 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.inference.MODEL_CATALOG
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.Theme
-import com.inspiredandroid.kai.ui.chat.ChatScreenContent
-import com.inspiredandroid.kai.ui.chat.ChatUiState
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.settings.ConfiguredServiceEntry
-import com.inspiredandroid.kai.ui.settings.ConnectionStatus
-import com.inspiredandroid.kai.ui.settings.SettingsModel
-import com.inspiredandroid.kai.ui.settings.SettingsScreenContent
-import com.inspiredandroid.kai.ui.settings.SettingsTab
-import com.inspiredandroid.kai.ui.settings.SettingsUiState
+import com.genzxid.app.data.Service
+import com.genzxid.app.inference.MODEL_CATALOG
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.Theme
+import com.genzxid.app.ui.chat.ChatScreenContent
+import com.genzxid.app.ui.chat.ChatUiState
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.settings.ConfiguredServiceEntry
+import com.genzxid.app.ui.settings.ConnectionStatus
+import com.genzxid.app.ui.settings.SettingsModel
+import com.genzxid.app.ui.settings.SettingsScreenContent
+import com.genzxid.app.ui.settings.SettingsTab
+import com.genzxid.app.ui.settings.SettingsUiState
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -55,7 +55,7 @@ import org.junit.Rule
 import org.junit.Test
 
 /**
- * Screenshots for the /run-gemma-locally/ SEO landing page on kai9000.com.
+ * Screenshots for the /run-gemma-locally/ SEO landing page on genzxid.com.
  * Each test renders a specific state of the LiteRT settings card or the chat "Initializing" state.
  * Snapshots are copied to site/img/gemma-local-*.png by the updateScreenshots Gradle task.
  */

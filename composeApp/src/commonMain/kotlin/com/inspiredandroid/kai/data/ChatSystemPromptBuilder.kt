@@ -6,9 +6,9 @@
 // `SystemPromptVariant`; each `if (variant == ...)` block is the single source of
 // truth for where a section belongs. No post-hoc regex stripping.
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.skills.SkillManifest
+import com.genzxid.app.skills.SkillManifest
 import kotlin.time.Instant
 
 /**

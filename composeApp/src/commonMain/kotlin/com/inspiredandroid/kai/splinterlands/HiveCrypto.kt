@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
 /**
  * Signs a message (username + timestamp) with the Hive posting key.

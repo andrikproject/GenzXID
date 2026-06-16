@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PACKAGE="com.inspiredandroid.kai"
-ACTIVITY="com.inspiredandroid.kai.MainActivity"
+PACKAGE="com.genzxid.app"
+ACTIVITY="com.genzxid.app.MainActivity"
 EVENT_COUNT="${1:-10000}"
 THROTTLE="${2:-50}"
 

@@ -17,7 +17,7 @@ composeCompiler {
 
 kotlin {
     androidLibrary {
-        namespace = "com.inspiredandroid.kai.shared"
+        namespace = "com.genzxid.app.shared"
         compileSdk =
             libs.versions.android.compileSdk
                 .get()
@@ -48,7 +48,7 @@ kotlin {
             // Must differ from the iosApp bundle identifier — iOS refuses to install a
             // .app whose embedded framework shares its parent's identifier (MIInstaller
             // error 57 / DuplicateIdentifier).
-            binaryOption("bundleId", "com.inspiredandroid.kai.composeapp")
+            binaryOption("bundleId", "com.genzxid.app.composeapp")
         }
     }
 
@@ -165,7 +165,7 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.inspiredandroid.kai.MainKt"
+        mainClass = "com.genzxid.app.MainKt"
 
         buildTypes.release.proguard {
             configurationFiles.from(
@@ -230,7 +230,7 @@ class VersionGeneratorPlugin : Plugin<Project> {
             versionFile.parentFile?.mkdirs()
             versionFile.writeText(
                 """
-                package com.inspiredandroid.kai
+                package com.genzxid.app
 
                 object Version {
                     const val appVersion = "$appVersion"

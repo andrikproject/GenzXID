@@ -1,10 +1,10 @@
-package com.inspiredandroid.kai.notifications
+package com.genzxid.app.notifications
 
 import android.app.NotificationManager
 import android.content.Context
 import android.content.pm.PackageManager
-import com.inspiredandroid.kai.data.NotificationRecord
-import com.inspiredandroid.kai.data.NotificationStore
+import com.genzxid.app.data.NotificationRecord
+import com.genzxid.app.data.NotificationStore
 import org.koin.java.KoinJavaComponent.inject
 
 // Whether the listener service is declared in the merged manifest. The `foss` flavor
@@ -19,7 +19,7 @@ internal fun Context.declaresNotificationListener(): Boolean = try {
 }
 
 private const val NOTIFICATION_LISTENER_FQN =
-    "com.inspiredandroid.kai.notifications.KaiNotificationListenerService"
+    "com.genzxid.app.notifications.KaiNotificationListenerService"
 
 actual class NotificationReader actual constructor() {
     private val context: Context by inject(Context::class.java)

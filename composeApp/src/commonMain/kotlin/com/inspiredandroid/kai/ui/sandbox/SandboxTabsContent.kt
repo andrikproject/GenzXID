@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.sandbox
+package com.genzxid.app.ui.sandbox
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -31,13 +31,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.TerminalLine
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.settings.SandboxUiState
-import com.inspiredandroid.kai.ui.settings.SettingsCard
-import com.inspiredandroid.kai.ui.settings.TerminalContent
-import com.inspiredandroid.kai.ui.settings.TerminalDarkBg
+import com.genzxid.app.SandboxController
+import com.genzxid.app.TerminalLine
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.settings.SandboxUiState
+import com.genzxid.app.ui.settings.SettingsCard
+import com.genzxid.app.ui.settings.TerminalContent
+import com.genzxid.app.ui.settings.TerminalDarkBg
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.sandbox_session_chip_session
 import kai.composeapp.generated.resources.sandbox_session_chip_temporary

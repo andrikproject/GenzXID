@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
-import com.inspiredandroid.kai.data.EmailAccount
-import com.inspiredandroid.kai.data.EmailStore
+import com.genzxid.app.data.EmailAccount
+import com.genzxid.app.data.EmailStore
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 

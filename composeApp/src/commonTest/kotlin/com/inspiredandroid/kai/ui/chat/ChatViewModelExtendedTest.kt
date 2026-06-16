@@ -1,10 +1,10 @@
-package com.inspiredandroid.kai.ui.chat
+package com.genzxid.app.ui.chat
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.ServiceEntry
-import com.inspiredandroid.kai.data.TaskScheduler
-import com.inspiredandroid.kai.testutil.FakeDataRepository
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.ServiceEntry
+import com.genzxid.app.data.TaskScheduler
+import com.genzxid.app.testutil.FakeDataRepository
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -1,7 +1,7 @@
 @file:Suppress("ktlint:standard:filename")
 @file:OptIn(ExperimentalDesktopTarget::class)
 
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -37,7 +37,7 @@ fun main() {
         Window(
             onCloseRequest = ::exitApplication,
             state = windowState,
-            title = "Kai 9000",
+            title = "GenzXID",
             icon = painterResource(Res.drawable.logo),
         ) {
             // Defer TTS initialization until after the first frame

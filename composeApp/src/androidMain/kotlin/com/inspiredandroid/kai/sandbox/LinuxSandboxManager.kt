@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import android.content.Context
 import android.os.Build
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import com.inspiredandroid.kai.SandboxSessions
-import com.inspiredandroid.kai.TerminalLine
-import com.inspiredandroid.kai.data.ConversationStorage
+import com.genzxid.app.SandboxSessions
+import com.genzxid.app.TerminalLine
+import com.genzxid.app.data.ConversationStorage
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
 import kotlinx.coroutines.CoroutineScope

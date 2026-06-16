@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import android.content.Context
 import android.content.pm.ApplicationInfo

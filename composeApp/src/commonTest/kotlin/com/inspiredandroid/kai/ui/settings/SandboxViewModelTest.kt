@@ -1,12 +1,12 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import app.cash.turbine.test
-import com.inspiredandroid.kai.CommandHandle
-import com.inspiredandroid.kai.NoOpCommandHandle
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.SandboxFileEntry
-import com.inspiredandroid.kai.SandboxStatus
-import com.inspiredandroid.kai.testutil.FakeDataRepository
+import com.genzxid.app.CommandHandle
+import com.genzxid.app.NoOpCommandHandle
+import com.genzxid.app.SandboxController
+import com.genzxid.app.SandboxFileEntry
+import com.genzxid.app.SandboxStatus
+import com.genzxid.app.testutil.FakeDataRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow

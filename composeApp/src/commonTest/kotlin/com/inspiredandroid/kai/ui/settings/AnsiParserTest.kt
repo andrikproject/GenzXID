@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle

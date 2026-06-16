@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalVoiceApi::class)
 
-package com.inspiredandroid.kai.screenshots
+package com.genzxid.app.screenshots
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ColorScheme
@@ -11,10 +11,10 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
-import com.inspiredandroid.kai.ui.DarkColorScheme
-import com.inspiredandroid.kai.ui.Theme
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiParser
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiRenderer
+import com.genzxid.app.ui.DarkColorScheme
+import com.genzxid.app.ui.Theme
+import com.genzxid.app.ui.dynamicui.KaiUiParser
+import com.genzxid.app.ui.dynamicui.KaiUiRenderer
 import nl.marc_apps.tts.experimental.ExperimentalVoiceApi
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.setResourceReaderAndroidContext

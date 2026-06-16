@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.chat.composables
+package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.skills.SkillManifest
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.skills.SkillManifest
+import com.genzxid.app.ui.handCursor
 import kotlinx.collections.immutable.ImmutableList
 
 /**

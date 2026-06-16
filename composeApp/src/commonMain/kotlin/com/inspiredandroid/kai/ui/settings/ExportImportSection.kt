@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -32,12 +32,12 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.kai.data.ImportSection
-import com.inspiredandroid.kai.data.SharedJson
-import com.inspiredandroid.kai.data.detectImportSections
-import com.inspiredandroid.kai.saveFileToDevice
-import com.inspiredandroid.kai.ui.components.VerticalScrollbarForScroll
-import com.inspiredandroid.kai.ui.handCursor
+import com.genzxid.app.data.ImportSection
+import com.genzxid.app.data.SharedJson
+import com.genzxid.app.data.detectImportSections
+import com.genzxid.app.saveFileToDevice
+import com.genzxid.app.ui.components.VerticalScrollbarForScroll
+import com.genzxid.app.ui.handCursor
 import io.github.vinceglb.filekit.dialogs.FileKitType
 import io.github.vinceglb.filekit.dialogs.compose.rememberFilePickerLauncher
 import io.github.vinceglb.filekit.readBytes

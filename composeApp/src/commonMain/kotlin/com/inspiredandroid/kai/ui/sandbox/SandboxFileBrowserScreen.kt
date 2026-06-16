@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.sandbox
+package com.genzxid.app.ui.sandbox
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -50,11 +50,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.kai.SandboxFileEntry
-import com.inspiredandroid.kai.formatFileSize
-import com.inspiredandroid.kai.ui.handCursor
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardBorder
-import com.inspiredandroid.kai.ui.kaiAdaptiveCardColors
+import com.genzxid.app.SandboxFileEntry
+import com.genzxid.app.formatFileSize
+import com.genzxid.app.ui.handCursor
+import com.genzxid.app.ui.kaiAdaptiveCardBorder
+import com.genzxid.app.ui.kaiAdaptiveCardColors
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.sandbox_files_action_delete
 import kai.composeapp.generated.resources.sandbox_files_action_more

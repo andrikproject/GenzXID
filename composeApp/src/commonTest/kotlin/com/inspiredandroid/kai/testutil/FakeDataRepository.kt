@@ -1,32 +1,32 @@
-package com.inspiredandroid.kai.testutil
+package com.genzxid.app.testutil
 
-import com.inspiredandroid.kai.data.Conversation
-import com.inspiredandroid.kai.data.DataRepository
-import com.inspiredandroid.kai.data.EmailAccount
-import com.inspiredandroid.kai.data.EmailSyncState
-import com.inspiredandroid.kai.data.FallbackStatus
-import com.inspiredandroid.kai.data.FreeMode
-import com.inspiredandroid.kai.data.HeartbeatConfig
-import com.inspiredandroid.kai.data.HeartbeatLogEntry
-import com.inspiredandroid.kai.data.ImportSection
-import com.inspiredandroid.kai.data.MemoryEntry
-import com.inspiredandroid.kai.data.ScheduledTask
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.ServiceEntry
-import com.inspiredandroid.kai.data.ServiceInstance
-import com.inspiredandroid.kai.data.SmsDraft
-import com.inspiredandroid.kai.data.SmsSyncState
-import com.inspiredandroid.kai.data.SystemPromptVariant
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.inference.DownloadError
-import com.inspiredandroid.kai.inference.DownloadedModel
-import com.inspiredandroid.kai.inference.EngineState
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.mcp.McpServerConfig
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.tools.CommonTools
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.settings.SettingsModel
+import com.genzxid.app.data.Conversation
+import com.genzxid.app.data.DataRepository
+import com.genzxid.app.data.EmailAccount
+import com.genzxid.app.data.EmailSyncState
+import com.genzxid.app.data.FallbackStatus
+import com.genzxid.app.data.FreeMode
+import com.genzxid.app.data.HeartbeatConfig
+import com.genzxid.app.data.HeartbeatLogEntry
+import com.genzxid.app.data.ImportSection
+import com.genzxid.app.data.MemoryEntry
+import com.genzxid.app.data.ScheduledTask
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.ServiceEntry
+import com.genzxid.app.data.ServiceInstance
+import com.genzxid.app.data.SmsDraft
+import com.genzxid.app.data.SmsSyncState
+import com.genzxid.app.data.SystemPromptVariant
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.inference.DownloadError
+import com.genzxid.app.inference.DownloadedModel
+import com.genzxid.app.inference.EngineState
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.mcp.McpServerConfig
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.tools.CommonTools
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.settings.SettingsModel
 import io.github.vinceglb.filekit.PlatformFile
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -188,7 +188,7 @@ class FakeDataRepository : DataRepository {
     override suspend fun ask(
         question: String?,
         files: List<PlatformFile>,
-        uiSubmission: com.inspiredandroid.kai.data.UiSubmission?,
+        uiSubmission: com.genzxid.app.data.UiSubmission?,
         activeSkillId: String?,
     ) {
         askCalls.add(question to files)
@@ -330,13 +330,13 @@ class FakeDataRepository : DataRepository {
     override fun isMcpServerConnected(serverId: String): Boolean = serverId in mcpConnected
 
     var lastActiveSkillId: String? = null
-    var skills: List<com.inspiredandroid.kai.skills.SkillManifest> = emptyList()
+    var skills: List<com.genzxid.app.skills.SkillManifest> = emptyList()
 
-    override fun getInstalledSkills(): List<com.inspiredandroid.kai.skills.SkillManifest> = skills
+    override fun getInstalledSkills(): List<com.genzxid.app.skills.SkillManifest> = skills
     override suspend fun uninstallSkill(id: String) {}
-    override suspend fun browseSkillMarketplaces(): Result<List<com.inspiredandroid.kai.skills.RegistrySkillEntry>> = Result.success(emptyList())
-    override suspend fun installBrowsedSkill(entry: com.inspiredandroid.kai.skills.RegistrySkillEntry): Result<com.inspiredandroid.kai.skills.SkillManifest> = Result.failure(NotImplementedError())
-    override suspend fun installGitHubSkill(owner: String, repo: String, ref: String, path: String): Result<com.inspiredandroid.kai.skills.SkillManifest> = Result.failure(NotImplementedError())
+    override suspend fun browseSkillMarketplaces(): Result<List<com.genzxid.app.skills.RegistrySkillEntry>> = Result.success(emptyList())
+    override suspend fun installBrowsedSkill(entry: com.genzxid.app.skills.RegistrySkillEntry): Result<com.genzxid.app.skills.SkillManifest> = Result.failure(NotImplementedError())
+    override suspend fun installGitHubSkill(owner: String, repo: String, ref: String, path: String): Result<com.genzxid.app.skills.SkillManifest> = Result.failure(NotImplementedError())
 
     override suspend fun connectEnabledMcpServers() {
         mcpServers.filter { it.isEnabled }.forEach { mcpConnected.add(it.id) }
@@ -559,7 +559,7 @@ class FakeDataRepository : DataRepository {
     override fun isNotificationListenerAccessGranted(): Boolean = notificationListenerAccessGranted
     override fun openNotificationListenerSettings() {}
     override fun getPendingNotificationCount(): Int = 0
-    override fun getNotificationSyncState(): com.inspiredandroid.kai.data.NotificationSyncState = com.inspiredandroid.kai.data.NotificationSyncState()
+    override fun getNotificationSyncState(): com.genzxid.app.data.NotificationSyncState = com.genzxid.app.data.NotificationSyncState()
     override suspend fun clearPendingNotifications() {}
 
     private var uiScale: Float = 1.0f

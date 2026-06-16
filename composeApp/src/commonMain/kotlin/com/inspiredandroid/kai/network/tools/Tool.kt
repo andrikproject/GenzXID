@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.network.tools
+package com.genzxid.app.network.tools
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonObject

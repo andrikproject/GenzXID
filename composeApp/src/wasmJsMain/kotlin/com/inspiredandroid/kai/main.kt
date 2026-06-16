@@ -1,7 +1,7 @@
 @file:Suppress("ktlint:standard:filename")
 @file:OptIn(ExperimentalBrowserHistoryApi::class)
 
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue

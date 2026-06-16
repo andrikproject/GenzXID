@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
 /**
  * Tiny YAML-subset parser for SKILL.md frontmatter. Only handles `name` and

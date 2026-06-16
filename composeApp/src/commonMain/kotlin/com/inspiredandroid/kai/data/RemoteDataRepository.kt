@@ -1,57 +1,57 @@
 @file:OptIn(ExperimentalEncodingApi::class, ExperimentalTime::class, ExperimentalUuidApi::class)
 
-package com.inspiredandroid.kai.data
+package com.genzxid.app.data
 
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.compressImageBytes
-import com.inspiredandroid.kai.currentPlatform
-import com.inspiredandroid.kai.data.providers.buildAnthropicMessages
-import com.inspiredandroid.kai.data.providers.buildOpenAIMessages
-import com.inspiredandroid.kai.email.EmailPoller
-import com.inspiredandroid.kai.formatFileSize
-import com.inspiredandroid.kai.getAvailableTools
-import com.inspiredandroid.kai.getPlatformToolDefinitions
-import com.inspiredandroid.kai.inference.DownloadError
-import com.inspiredandroid.kai.inference.DownloadedModel
-import com.inspiredandroid.kai.inference.EngineState
-import com.inspiredandroid.kai.inference.InferenceMessage
-import com.inspiredandroid.kai.inference.LocalInferenceEngine
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.inference.LocalTool
-import com.inspiredandroid.kai.inference.NoModelDownloadedException
-import com.inspiredandroid.kai.inference.getTotalMemoryBytes
-import com.inspiredandroid.kai.mcp.McpServerConfig
-import com.inspiredandroid.kai.mcp.McpServerManager
-import com.inspiredandroid.kai.network.AllServicesFailedException
-import com.inspiredandroid.kai.network.AnthropicInsufficientCreditsException
-import com.inspiredandroid.kai.network.ContextWindowExceededException
-import com.inspiredandroid.kai.network.FileTooLargeException
-import com.inspiredandroid.kai.network.OpenAICompatibleEmptyResponseException
-import com.inspiredandroid.kai.network.OpenAICompatibleQuotaExhaustedException
-import com.inspiredandroid.kai.network.Requests
-import com.inspiredandroid.kai.network.ServiceCredentials
-import com.inspiredandroid.kai.network.UnsupportedFileTypeException
-import com.inspiredandroid.kai.network.dtos.anthropic.extractText
-import com.inspiredandroid.kai.network.dtos.gemini.extractText
-import com.inspiredandroid.kai.network.dtos.openaicompatible.extractInlineToolCalls
-import com.inspiredandroid.kai.network.toUiError
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.skills.RegistrySkillEntry
-import com.inspiredandroid.kai.skills.SkillManager
-import com.inspiredandroid.kai.skills.SkillManifest
-import com.inspiredandroid.kai.sms.SmsPoller
-import com.inspiredandroid.kai.sms.SmsReader
-import com.inspiredandroid.kai.sms.SmsSendResult
-import com.inspiredandroid.kai.sms.SmsSender
-import com.inspiredandroid.kai.tools.CommonTools
-import com.inspiredandroid.kai.tools.NotificationListenerController
-import com.inspiredandroid.kai.tools.SmsPermissionController
-import com.inspiredandroid.kai.tools.SmsSendPermissionController
-import com.inspiredandroid.kai.ui.chat.History
-import com.inspiredandroid.kai.ui.chat.ToolCallInfo
-import com.inspiredandroid.kai.ui.chat.toGeminiMessageDto
-import com.inspiredandroid.kai.ui.settings.SettingsModel
+import com.genzxid.app.SandboxController
+import com.genzxid.app.compressImageBytes
+import com.genzxid.app.currentPlatform
+import com.genzxid.app.data.providers.buildAnthropicMessages
+import com.genzxid.app.data.providers.buildOpenAIMessages
+import com.genzxid.app.email.EmailPoller
+import com.genzxid.app.formatFileSize
+import com.genzxid.app.getAvailableTools
+import com.genzxid.app.getPlatformToolDefinitions
+import com.genzxid.app.inference.DownloadError
+import com.genzxid.app.inference.DownloadedModel
+import com.genzxid.app.inference.EngineState
+import com.genzxid.app.inference.InferenceMessage
+import com.genzxid.app.inference.LocalInferenceEngine
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.inference.LocalTool
+import com.genzxid.app.inference.NoModelDownloadedException
+import com.genzxid.app.inference.getTotalMemoryBytes
+import com.genzxid.app.mcp.McpServerConfig
+import com.genzxid.app.mcp.McpServerManager
+import com.genzxid.app.network.AllServicesFailedException
+import com.genzxid.app.network.AnthropicInsufficientCreditsException
+import com.genzxid.app.network.ContextWindowExceededException
+import com.genzxid.app.network.FileTooLargeException
+import com.genzxid.app.network.OpenAICompatibleEmptyResponseException
+import com.genzxid.app.network.OpenAICompatibleQuotaExhaustedException
+import com.genzxid.app.network.Requests
+import com.genzxid.app.network.ServiceCredentials
+import com.genzxid.app.network.UnsupportedFileTypeException
+import com.genzxid.app.network.dtos.anthropic.extractText
+import com.genzxid.app.network.dtos.gemini.extractText
+import com.genzxid.app.network.dtos.openaicompatible.extractInlineToolCalls
+import com.genzxid.app.network.toUiError
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.skills.RegistrySkillEntry
+import com.genzxid.app.skills.SkillManager
+import com.genzxid.app.skills.SkillManifest
+import com.genzxid.app.sms.SmsPoller
+import com.genzxid.app.sms.SmsReader
+import com.genzxid.app.sms.SmsSendResult
+import com.genzxid.app.sms.SmsSender
+import com.genzxid.app.tools.CommonTools
+import com.genzxid.app.tools.NotificationListenerController
+import com.genzxid.app.tools.SmsPermissionController
+import com.genzxid.app.tools.SmsSendPermissionController
+import com.genzxid.app.ui.chat.History
+import com.genzxid.app.ui.chat.ToolCallInfo
+import com.genzxid.app.ui.chat.toGeminiMessageDto
+import com.genzxid.app.ui.settings.SettingsModel
 import io.github.vinceglb.filekit.PlatformFile
 import io.github.vinceglb.filekit.mimeType
 import io.github.vinceglb.filekit.name
@@ -1110,11 +1110,11 @@ class RemoteDataRepository(
     private suspend fun makeFinalCallWithoutTools(
         service: Service,
         credentials: ServiceCredentials,
-        messages: List<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>,
+        messages: List<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>,
     ): String {
         val bailoutMessages = messages.toMutableList().apply {
             add(
-                com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message(
+                com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message(
                     role = "user",
                     content = JsonPrimitive("You have reached the tool call limit. Please respond with the best answer you have so far based on the information gathered."),
                 ),
@@ -1203,7 +1203,7 @@ class RemoteDataRepository(
         throw lastException!!
     }
 
-    private fun estimateMessageChars(msg: com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message): Int {
+    private fun estimateMessageChars(msg: com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message): Int {
         val contentChars = when (val content = msg.content) {
             is JsonArray -> {
                 // Vision messages: only count text parts, not base64 image data
@@ -1230,9 +1230,9 @@ class RemoteDataRepository(
      * (keeping the system prompt and most recent messages).
      */
     private fun trimMessagesForContext(
-        messages: List<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>,
+        messages: List<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>,
         contextWindowTokens: Int = ModelCatalog.DEFAULT_CONTEXT_WINDOW_TOKENS,
-    ): List<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message> {
+    ): List<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message> {
         val maxChars = contextWindowTokens * ESTIMATED_CHARS_PER_TOKEN
         val totalChars = messages.sumOf { estimateMessageChars(it) }
         if (totalChars <= maxChars) return messages
@@ -1248,7 +1248,7 @@ class RemoteDataRepository(
         // trimming never strands one without the other. Strict OpenAI-compatible providers (e.g.
         // DeepSeek via OpenCode Zen) reject an assistant `tool_calls` message that isn't followed
         // by its tool responses, and a `tool` message without a preceding `tool_calls`.
-        val groups = mutableListOf<List<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>>()
+        val groups = mutableListOf<List<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>>()
         var index = 0
         while (index < nonSystemMessages.size) {
             val msg = nonSystemMessages[index]
@@ -1266,7 +1266,7 @@ class RemoteDataRepository(
         }
 
         // Keep whole groups from the end until we exceed the budget.
-        val kept = mutableListOf<com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>()
+        val kept = mutableListOf<com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message>()
         var usedChars = 0
         for (group in groups.asReversed()) {
             val groupChars = group.sumOf { estimateMessageChars(it) }

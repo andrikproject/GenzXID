@@ -1,7 +1,7 @@
-package com.inspiredandroid.kai.skills
+package com.genzxid.app.skills
 
-import com.inspiredandroid.kai.SandboxController
-import com.inspiredandroid.kai.getBackgroundDispatcher
+import com.genzxid.app.SandboxController
+import com.genzxid.app.getBackgroundDispatcher
 import kai.composeapp.generated.resources.Res
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob

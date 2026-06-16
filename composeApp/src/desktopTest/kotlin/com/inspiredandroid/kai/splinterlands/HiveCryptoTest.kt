@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
 import org.bouncycastle.crypto.params.ECDomainParameters
 import org.bouncycastle.jce.ECNamedCurveTable

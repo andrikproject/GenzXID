@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.ui.markdown
+package com.genzxid.app.ui.markdown
 
-import com.inspiredandroid.kai.ui.dynamicui.KaiUiParser
+import com.genzxid.app.ui.dynamicui.KaiUiParser
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList

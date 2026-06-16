@@ -1,6 +1,6 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
-import com.inspiredandroid.kai.httpClient
+import com.genzxid.app.httpClient
 import io.ktor.client.request.header
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody

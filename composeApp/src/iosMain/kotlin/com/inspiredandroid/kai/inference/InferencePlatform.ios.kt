@@ -1,8 +1,8 @@
 @file:OptIn(kotlinx.cinterop.ExperimentalForeignApi::class)
 
-package com.inspiredandroid.kai.inference
+package com.genzxid.app.inference
 
-import com.inspiredandroid.kai.getAppFilesDirectory
+import com.genzxid.app.getAppFilesDirectory
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSCachesDirectory
 import platform.Foundation.NSFileManager

@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.mcp
+package com.genzxid.app.mcp
 
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope

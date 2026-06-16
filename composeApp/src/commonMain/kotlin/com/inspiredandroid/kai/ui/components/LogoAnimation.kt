@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.ui.components
+package com.genzxid.app.ui.components
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.EaseInOut

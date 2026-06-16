@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.email
+package com.genzxid.app.email
 
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi

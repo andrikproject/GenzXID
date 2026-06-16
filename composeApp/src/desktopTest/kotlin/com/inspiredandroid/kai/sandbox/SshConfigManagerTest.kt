@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import java.io.File
 import java.nio.file.Files

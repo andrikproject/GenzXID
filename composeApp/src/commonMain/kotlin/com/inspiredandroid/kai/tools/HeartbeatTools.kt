@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.MemoryStore
-import com.inspiredandroid.kai.network.tools.ParameterSchema
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.network.tools.ToolSchema
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.MemoryStore
+import com.genzxid.app.network.tools.ParameterSchema
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.network.tools.ToolSchema
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tool_promote_learning_description
 import kai.composeapp.generated.resources.tool_promote_learning_name

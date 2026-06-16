@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.sandbox
+package com.genzxid.app.sandbox
 
 import java.io.File
 
 /**
  * Manages the sandbox user's ~/.ssh directory: a seeded defaults block
  * (ControlMaster + keepalives) plus per-host alias blocks added by
- * [com.inspiredandroid.kai.tools.SshConfigureHostTool].
+ * [com.genzxid.app.tools.SshConfigureHostTool].
  *
  * Pure JVM file IO — no Android dependencies — so it can be unit-tested.
  * Lives in jvmShared but is only consumed on Android (the sandbox is

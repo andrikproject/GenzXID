@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalComposeUiApi::class)
 
-package com.inspiredandroid.kai
+package com.genzxid.app
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -11,20 +11,20 @@ import androidx.compose.ui.draganddrop.dragData
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.inspiredandroid.kai.data.AppSettings
-import com.inspiredandroid.kai.data.EmailStore
-import com.inspiredandroid.kai.data.EncryptedFileSettings
-import com.inspiredandroid.kai.data.MemoryStore
-import com.inspiredandroid.kai.data.TaskStore
-import com.inspiredandroid.kai.mcp.McpServerManager
-import com.inspiredandroid.kai.network.tools.Tool
-import com.inspiredandroid.kai.network.tools.ToolInfo
-import com.inspiredandroid.kai.tools.CommonTools
-import com.inspiredandroid.kai.tools.EmailTools
-import com.inspiredandroid.kai.tools.HeartbeatTools
-import com.inspiredandroid.kai.tools.ProcessManagerTool
-import com.inspiredandroid.kai.tools.SchedulingTools
-import com.inspiredandroid.kai.tools.ShellCommandTool
+import com.genzxid.app.data.AppSettings
+import com.genzxid.app.data.EmailStore
+import com.genzxid.app.data.EncryptedFileSettings
+import com.genzxid.app.data.MemoryStore
+import com.genzxid.app.data.TaskStore
+import com.genzxid.app.mcp.McpServerManager
+import com.genzxid.app.network.tools.Tool
+import com.genzxid.app.network.tools.ToolInfo
+import com.genzxid.app.tools.CommonTools
+import com.genzxid.app.tools.EmailTools
+import com.genzxid.app.tools.HeartbeatTools
+import com.genzxid.app.tools.ProcessManagerTool
+import com.genzxid.app.tools.SchedulingTools
+import com.genzxid.app.tools.ShellCommandTool
 import com.russhwolf.settings.Settings
 import io.github.vinceglb.filekit.FileKit
 import io.github.vinceglb.filekit.PlatformFile

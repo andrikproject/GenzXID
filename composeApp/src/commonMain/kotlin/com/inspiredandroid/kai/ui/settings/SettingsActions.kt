@@ -1,11 +1,11 @@
-package com.inspiredandroid.kai.ui.settings
+package com.genzxid.app.ui.settings
 
 import androidx.compose.runtime.Immutable
-import com.inspiredandroid.kai.data.ImportSection
-import com.inspiredandroid.kai.data.Service
-import com.inspiredandroid.kai.data.ThemeMode
-import com.inspiredandroid.kai.inference.LocalModel
-import com.inspiredandroid.kai.mcp.PopularMcpServer
+import com.genzxid.app.data.ImportSection
+import com.genzxid.app.data.Service
+import com.genzxid.app.data.ThemeMode
+import com.genzxid.app.inference.LocalModel
+import com.genzxid.app.mcp.PopularMcpServer
 
 @Immutable
 data class SettingsActions(
@@ -55,7 +55,7 @@ data class SettingsActions(
     val onUninstallSkill: (String) -> Unit,
     val onShowAddSkillDialog: (Boolean) -> Unit,
     val onInstallGitHubSkill: (String) -> Unit,
-    val onInstallBrowsedSkill: (com.inspiredandroid.kai.skills.RegistrySkillEntry) -> Unit,
+    val onInstallBrowsedSkill: (com.genzxid.app.skills.RegistrySkillEntry) -> Unit,
     val onDownloadLocalModel: (LocalModel) -> Unit,
     val onCancelLocalModelDownload: () -> Unit,
     val onDeleteLocalModel: (String) -> Unit,

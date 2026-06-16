@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.splinterlands
+package com.genzxid.app.splinterlands
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.Serializable

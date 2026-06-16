@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.inspiredandroid.kai.ui
+package com.genzxid.app.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -36,14 +36,16 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
-val darkPurple = Color(0xFF6200EE)
-val lightPurple = Color(0xff8063C5)
-val gradientBrush = androidx.compose.ui.graphics.Brush.horizontalGradient(listOf(darkPurple, lightPurple))
+val darkPurple = Color(0xFF7C3AED)
+val lightPurple = Color(0xFFA855F7)
+val darkCyan = Color(0xFF06B6D4)
+val lightCyan = Color(0xFF22D3EE)
+val gradientBrush = androidx.compose.ui.graphics.Brush.horizontalGradient(listOf(darkPurple, darkCyan))
 
 // Animated border gradient colors
-val gradientPurple = Color(0xFF9C27B0)
-val gradientViolet = Color(0xFF7C4DFF)
-val gradientMagenta = Color(0xFFE040FB)
+val gradientPurple = Color(0xFF7C3AED)
+val gradientViolet = Color(0xFFA855F7)
+val gradientMagenta = Color(0xFF06B6D4)
 
 fun Modifier.handCursor() = pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true)
 

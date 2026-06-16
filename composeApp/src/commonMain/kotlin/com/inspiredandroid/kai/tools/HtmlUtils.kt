@@ -1,4 +1,4 @@
-package com.inspiredandroid.kai.tools
+package com.genzxid.app.tools
 
 internal fun String.decodeHtmlEntities(): String = this
     .replace("&nbsp;", " ")

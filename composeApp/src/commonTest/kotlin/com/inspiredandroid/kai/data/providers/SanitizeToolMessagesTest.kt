@@ -1,8 +1,8 @@
-package com.inspiredandroid.kai.data.providers
+package com.genzxid.app.data.providers
 
-import com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.FunctionCall
-import com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message
-import com.inspiredandroid.kai.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.ToolCall
+import com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.FunctionCall
+import com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.Message
+import com.genzxid.app.network.dtos.openaicompatible.OpenAICompatibleChatRequestDto.ToolCall
 import kotlinx.serialization.json.JsonPrimitive
 import kotlin.test.Test
 import kotlin.test.assertEquals
