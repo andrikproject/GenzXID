@@ -2,28 +2,34 @@
 
 package com.genzxid.app
 
+import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.ColorScheme
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Chat
+import androidx.compose.material.icons.filled.Extension
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Chat
+import androidx.compose.material.icons.outlined.Extension
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -36,24 +42,12 @@ import coil3.network.ktor3.KtorNetworkFetcherFactory
 import coil3.svg.SvgDecoder
 import com.genzxid.app.data.AppSettings
 import com.genzxid.app.data.ThemeMode
-import com.genzxid.app.tools.CalendarPermissionController
-import com.genzxid.app.tools.NotificationPermissionController
-import com.genzxid.app.tools.SetupCalendarPermissionHandler
-import com.genzxid.app.tools.SetupNotificationPermissionHandler
-import com.genzxid.app.tools.SetupSmsPermissionHandler
-import com.genzxid.app.tools.SetupSmsSendPermissionHandler
-import com.genzxid.app.tools.SmsPermissionController
-import com.genzxid.app.tools.SmsSendPermissionController
-import com.genzxid.app.ui.DarkColorScheme
-import com.genzxid.app.ui.LightColorScheme
-import com.genzxid.app.ui.Theme
+import com.genzxid.app.tools.*
+import com.genzxid.app.ui.*
 import com.genzxid.app.ui.chat.ChatScreen
 import com.genzxid.app.ui.chat.ChatViewModel
 import com.genzxid.app.ui.components.FullScreenImageHost
-import com.genzxid.app.ui.handCursor
-import com.genzxid.app.ui.rememberSandboxAwareUriHandler
 import com.genzxid.app.ui.settings.SettingsScreen
-import com.genzxid.app.ui.withBlackBackground
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.tab_chat
 import kai.composeapp.generated.resources.tab_settings
@@ -67,14 +61,26 @@ import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.dsl.koinConfiguration
 
-@Serializable
-@SerialName("home")
-object Home
+// ── Navigation Routes ─────────────────────────────────────
+@Serializable @SerialName("home") object Home
+@Serializable @SerialName("tools") object Tools
+@Serializable @SerialName("settings") object Settings
 
-@Serializable
-@SerialName("settings")
-object Settings
+// ── Tab Data ──────────────────────────────────────────────
+data class NavTab(
+    val route: Any,
+    val label: String,
+    val selectedIcon: ImageVector,
+    val unselectedIcon: ImageVector,
+)
 
+private val NAV_TABS = listOf(
+    NavTab(Home, "Chat", Icons.Filled.Chat, Icons.Outlined.Chat),
+    NavTab(Tools, "Tools", Icons.Filled.Extension, Icons.Outlined.Extension),
+    NavTab(Settings, "Settings", Icons.Filled.Settings, Icons.Outlined.Settings),
+)
+
+// ── Main App Composable ───────────────────────────────────
 @Composable
 fun App(
     navController: NavHostController,
@@ -93,21 +99,18 @@ fun App(
             .build()
     }
 
-    // Reuse global Koin if already started (Android Application class),
-    // otherwise create a new instance (iOS, Desktop, Wasm).
     if (isKoinStarted) {
         AppContent(navController, lightColorScheme, darkColorScheme, textToSpeech, onAppOpens)
     } else {
         KoinApplication(
-            configuration = koinConfiguration {
-                modules(appModule)
-            },
+            configuration = koinConfiguration { modules(appModule) },
         ) {
             AppContent(navController, lightColorScheme, darkColorScheme, textToSpeech, onAppOpens)
         }
     }
 }
 
+// ── App Content ───────────────────────────────────────────
 @Composable
 private fun AppContent(
     navController: NavHostController,
@@ -118,35 +121,22 @@ private fun AppContent(
 ) {
     val appSettings = koinInject<AppSettings>()
 
-    // Track app opens after Koin is initialized
     onAppOpens?.let { callback ->
-        LaunchedEffect(Unit) {
-            callback(appSettings.trackAppOpen())
-        }
+        LaunchedEffect(Unit) { callback(appSettings.trackAppOpen()) }
     }
 
-    // Set up permission handlers
-    val calendarPermissionController = koinInject<CalendarPermissionController>()
-    SetupCalendarPermissionHandler(calendarPermissionController)
+    // Permission handlers
+    SetupCalendarPermissionHandler(koinInject())
+    SetupNotificationPermissionHandler(koinInject())
+    SetupSmsPermissionHandler(koinInject())
+    SetupSmsSendPermissionHandler(koinInject())
 
-    val notificationPermissionController = koinInject<NotificationPermissionController>()
-    SetupNotificationPermissionHandler(notificationPermissionController)
-
-    val smsPermissionController = koinInject<SmsPermissionController>()
-    SetupSmsPermissionHandler(smsPermissionController)
-
-    val smsSendPermissionController = koinInject<SmsSendPermissionController>()
-    SetupSmsSendPermissionHandler(smsSendPermissionController)
-
-    // Set TTS voice to match system language
     @OptIn(ExperimentalVoiceApi::class)
     LaunchedEffect(textToSpeech) {
-        val tts = textToSpeech ?: return@LaunchedEffect
-        val systemLanguage = Locale.current.language
-        val matchingVoice = tts.voices
-            .firstOrNull { it.languageTag.startsWith(systemLanguage) }
-        if (matchingVoice != null) {
-            tts.currentVoice = matchingVoice
+        textToSpeech?.also { tts ->
+            val systemLanguage = Locale.current.language
+            tts.voices.firstOrNull { it.languageTag.startsWith(systemLanguage) }
+                ?.let { tts.currentVoice = it }
         }
     }
 
@@ -175,77 +165,216 @@ private fun AppContent(
         Theme(colorScheme = effectiveColorScheme) {
             FullScreenImageHost {
                 val chatViewModel: ChatViewModel = koinViewModel()
-                val showTabBar = currentPlatform !is Platform.Mobile
                 val currentBackStackEntry by navController.currentBackStackEntryAsState()
-                val isHome = currentBackStackEntry?.destination?.route == "home"
+                val currentRoute = currentBackStackEntry?.destination?.route
 
-                val navigationTabBar: @Composable () -> Unit = {
-                    val isRtl = LocalLayoutDirection.current == LayoutDirection.Rtl
-                    val count = 2
-                    SingleChoiceSegmentedButtonRow {
-                        SegmentedButton(
-                            selected = isHome,
-                            onClick = {
-                                navController.navigate(Home) {
-                                    popUpTo(Home) { inclusive = true }
-                                    launchSingleTop = true
-                                }
-                            },
-                            shape = SegmentedButtonDefaults.itemShape(index = if (isRtl) count - 1 else 0, count = count),
-                            modifier = Modifier.handCursor(),
-                        ) {
-                            Text(stringResource(Res.string.tab_chat))
-                        }
-                        SegmentedButton(
-                            selected = !isHome,
-                            onClick = {
-                                navController.navigate(Settings) {
-                                    popUpTo(Home)
-                                    launchSingleTop = true
-                                }
-                            },
-                            shape = SegmentedButtonDefaults.itemShape(index = if (isRtl) 0 else count - 1, count = count),
-                            modifier = Modifier.handCursor(),
-                        ) {
-                            Text(stringResource(Res.string.tab_settings))
-                        }
-                    }
-                }
+                // Detect platform
+                val isMobile = currentPlatform is Platform.Mobile
+                val isDesktop = currentPlatform is Platform.Desktop
 
-                NavHost(
-                    navController,
-                    startDestination = Home,
-                    modifier = Modifier.background(MaterialTheme.colorScheme.background),
-                ) {
-                    composable<Home> {
-                        ChatScreen(
-                            viewModel = chatViewModel,
-                            textToSpeech = textToSpeech,
-                            onNavigateToSettings = {
-                                navController.navigate(Settings)
-                            },
-                            isSandboxAvailable = currentPlatform is Platform.Mobile.Android,
-                            navigationTabBar = if (showTabBar) navigationTabBar else null,
-                        )
-                    }
-                    composable<Settings> {
-                        if (showTabBar) {
-                            DisposableEffect(Unit) {
-                                onDispose {
-                                    chatViewModel.refreshSettings()
-                                }
-                            }
-                        }
-                        SettingsScreen(
-                            onNavigateBack = {
-                                chatViewModel.refreshSettings()
-                                navController.navigateUp()
-                            },
-                            navigationTabBar = if (showTabBar) navigationTabBar else null,
-                        )
-                    }
+                if (isDesktop) {
+                    // ── DESKTOP: Sidebar Layout ──────────
+                    DesktopLayout(navController, currentRoute, chatViewModel, textToSpeech)
+                } else {
+                    // ── MOBILE: Bottom Bar Layout ─────────
+                    MobileLayout(navController, currentRoute, chatViewModel, textToSpeech)
                 }
             }
+        }
+    }
+}
+
+// ── MOBILE: Bottom Navigation Layout ─────────────────────
+@Composable
+private fun MobileLayout(
+    navController: NavHostController,
+    currentRoute: String?,
+    chatViewModel: ChatViewModel,
+    textToSpeech: TextToSpeechInstance?,
+) {
+    val selectedTab = NAV_TABS.indexOfFirst { it.route::class.qualifiedName == currentRoute }
+        .coerceAtLeast(0)
+
+    Scaffold(
+        bottomBar = {
+            NavigationBar(
+                containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp),
+                tonalElevation = 8.dp,
+                shadowElevation = 4.dp,
+            ) {
+                NAV_TABS.forEachIndexed { index, tab ->
+                    val selected = index == selectedTab
+                    NavigationBarItem(
+                        selected = selected,
+                        onClick = {
+                            navController.navigate(tab.route) {
+                                popUpTo(Home) { saveState = true }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = {
+                            Icon(
+                                imageVector = if (selected) tab.selectedIcon else tab.unselectedIcon,
+                                contentDescription = tab.label,
+                                modifier = Modifier.size(24.dp),
+                            )
+                        },
+                        label = {
+                            Text(
+                                text = tab.label,
+                                fontSize = 11.sp,
+                                fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
+                            )
+                        },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f),
+                        ),
+                    )
+                }
+            }
+        },
+    ) { padding ->
+        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+            NavHostContent(navController, chatViewModel, textToSpeech)
+        }
+    }
+}
+
+// ── DESKTOP: Sidebar (NavigationRail) Layout ──────────────
+@Composable
+private fun DesktopLayout(
+    navController: NavHostController,
+    currentRoute: String?,
+    chatViewModel: ChatViewModel,
+    textToSpeech: TextToSpeechInstance?,
+) {
+    val selectedTab = NAV_TABS.indexOfFirst { it.route::class.qualifiedName == currentRoute }
+        .coerceAtLeast(0)
+
+    Row(modifier = Modifier.fillMaxSize()) {
+        // Sidebar
+        NavigationRail(
+            modifier = Modifier
+                .width(80.dp)
+                .fillMaxHeight(),
+            containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(2.dp),
+            header = {
+                // Logo area
+                Spacer(Modifier.height(16.dp))
+                Box(
+                    modifier = Modifier
+                        .size(44.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(
+                            Brush.linearGradient(listOf(darkPurple, darkCyan))
+                        ),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        "G",
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 22.sp,
+                    )
+                }
+                Spacer(Modifier.height(24.dp))
+            },
+        ) {
+            Spacer(Modifier.weight(1f))
+            NAV_TABS.forEachIndexed { index, tab ->
+                val selected = index == selectedTab
+                NavigationRailItem(
+                    selected = selected,
+                    onClick = {
+                        navController.navigate(tab.route) {
+                            popUpTo(Home) { saveState = true }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    },
+                    icon = {
+                        Icon(
+                            imageVector = if (selected) tab.selectedIcon else tab.unselectedIcon,
+                            contentDescription = tab.label,
+                        )
+                    },
+                    label = {
+                        Text(tab.label, fontSize = 11.sp, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal)
+                    },
+                    colors = NavigationRailItemDefaults.colors(
+                        selectedIconColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.primary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                        unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                        indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f),
+                    ),
+                )
+            }
+            Spacer(Modifier.weight(1f))
+        }
+
+        // Main content area
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxHeight()
+                .background(MaterialTheme.colorScheme.background),
+        ) {
+            NavHostContent(navController, chatViewModel, textToSpeech)
+        }
+    }
+}
+
+// ── NavHost Content ────────────────────────────────────────
+@Composable
+private fun NavHostContent(
+    navController: NavHostController,
+    chatViewModel: ChatViewModel,
+    textToSpeech: TextToSpeechInstance?,
+) {
+    NavHost(
+        navController,
+        startDestination = Home,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
+    ) {
+        composable<Home> {
+            ChatScreen(
+                viewModel = chatViewModel,
+                textToSpeech = textToSpeech,
+                onNavigateToSettings = {
+                    navController.navigate(Settings)
+                },
+                isSandboxAvailable = currentPlatform is Platform.Mobile.Android,
+                navigationTabBar = null,
+            )
+        }
+        composable<Tools> {
+            // Tools screen placeholder — same as Chat for now
+            ChatScreen(
+                viewModel = chatViewModel,
+                textToSpeech = textToSpeech,
+                onNavigateToSettings = {
+                    navController.navigate(Settings)
+                },
+                isSandboxAvailable = currentPlatform is Platform.Mobile.Android,
+                navigationTabBar = null,
+            )
+        }
+        composable<Settings> {
+            SettingsScreen(
+                onNavigateBack = {
+                    chatViewModel.refreshSettings()
+                    navController.navigateUp()
+                },
+                navigationTabBar = null,
+            )
         }
     }
 }
