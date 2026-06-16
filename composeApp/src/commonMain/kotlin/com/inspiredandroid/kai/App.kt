@@ -63,9 +63,17 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.koin.dsl.koinConfiguration
 
 // ── Navigation Routes ─────────────────────────────────────
-@Serializable @SerialName("home") object Home
-@Serializable @SerialName("tools") object Tools
-@Serializable @SerialName("settings") object Settings
+@Serializable
+@SerialName("home")
+object Home
+
+@Serializable
+@SerialName("tools")
+object Tools
+
+@Serializable
+@SerialName("settings")
+object Settings
 
 // ── Tab Data ──────────────────────────────────────────────
 data class NavTab(
@@ -271,7 +279,7 @@ private fun DesktopLayout(
                         .size(44.dp)
                         .clip(RoundedCornerShape(12.dp))
                         .background(
-                            Brush.linearGradient(listOf(darkPurple, darkCyan))
+                            Brush.linearGradient(listOf(darkPurple, darkCyan)),
                         ),
                     contentAlignment = Alignment.Center,
                 ) {
