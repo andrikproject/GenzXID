@@ -1,4 +1,4 @@
-rootProject.name = "Kai"
+rootProject.name = "GenzXID"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
