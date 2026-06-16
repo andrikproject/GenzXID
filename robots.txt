@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genzxid.com/sitemap.xml
+Sitemap: https://genzxid.com/docs/sitemap.xml
