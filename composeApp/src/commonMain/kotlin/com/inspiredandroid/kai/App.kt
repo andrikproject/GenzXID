@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.Density
@@ -200,7 +201,6 @@ private fun MobileLayout(
             NavigationBar(
                 containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp),
                 tonalElevation = 8.dp,
-                shadowElevation = 4.dp,
             ) {
                 NAV_TABS.forEachIndexed { index, tab ->
                     val selected = index == selectedTab
