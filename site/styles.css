@@ -9,7 +9,6 @@
 :root {
   --bg: #0a0a1a;
   --bg-gradient: #0d1025;
-  --surface: rgba(15, 15, 35, 0.6);
   --surface-solid: #12122a;
   --surface-border: rgba(100, 200, 255, 0.1);
   --primary: #8b5cf6;
@@ -513,8 +512,8 @@ section {
 
 .cli-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 20px;
@@ -659,6 +658,15 @@ footer .impressum {
 
   .aurora-orb {
     display: none;
+  }
+
+  .aurora-bg::before,
+  .aurora-bg::after {
+    animation: none;
+  }
+
+  .hero::before {
+    animation: none;
   }
 }
 
@@ -1002,5 +1010,25 @@ footer .impressum {
   .models-table td {
     padding: 10px 12px;
     font-size: 0.9rem;
+  }
+}
+
+/* ---- Reduced motion preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  .aurora-bg::before,
+  .aurora-bg::after {
+    animation: none;
+  }
+
+  .aurora-orb {
+    animation: none;
+  }
+
+  .hero::before {
+    animation: none;
+  }
+
+  .fade-in {
+    transition: none;
   }
 }
