@@ -8,10 +8,10 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Chat
+import androidx.compose.material.icons.automirrored.filled.Chat
+import androidx.compose.material.icons.automirrored.outlined.Chat
 import androidx.compose.material.icons.filled.Extension
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.outlined.Chat
 import androidx.compose.material.icons.outlined.Extension
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.*
@@ -84,7 +84,7 @@ data class NavTab(
 )
 
 private val NAV_TABS = listOf(
-    NavTab(Home, "Chat", Icons.Filled.Chat, Icons.Outlined.Chat),
+    NavTab(Home, "Chat", Icons.AutoMirrored.Filled.Chat, Icons.AutoMirrored.Outlined.Chat),
     NavTab(Tools, "Tools", Icons.Filled.Extension, Icons.Outlined.Extension),
     NavTab(Settings, "Settings", Icons.Filled.Settings, Icons.Outlined.Settings),
 )
@@ -181,12 +181,17 @@ private fun AppContent(
                 val isMobile = currentPlatform is Platform.Mobile
                 val isDesktop = currentPlatform is Platform.Desktop
 
-                if (isDesktop) {
-                    // ── DESKTOP: Sidebar Layout ──────────
-                    DesktopLayout(navController, currentRoute, chatViewModel, textToSpeech)
-                } else {
-                    // ── MOBILE: Bottom Bar Layout ─────────
-                    MobileLayout(navController, currentRoute, chatViewModel, textToSpeech)
+                // Single full-screen aurora backdrop behind every layout. All
+                // surfaces above (nav bars, screens) stay translucent so the
+                // flowing gradient bleeds gently through (Aurora + Glassmorphism).
+                Box(Modifier.fillMaxSize().auroraBackground()) {
+                    if (isDesktop) {
+                        // ── DESKTOP: Sidebar Layout ──────────
+                        DesktopLayout(navController, currentRoute, chatViewModel, textToSpeech)
+                    } else {
+                        // ── MOBILE: Bottom Bar Layout ─────────
+                        MobileLayout(navController, currentRoute, chatViewModel, textToSpeech)
+                    }
                 }
             }
         }
@@ -205,10 +210,11 @@ private fun MobileLayout(
         .coerceAtLeast(0)
 
     Scaffold(
+        containerColor = Color.Transparent,
         bottomBar = {
             NavigationBar(
-                containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp),
-                tonalElevation = 8.dp,
+                containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.72f),
+                tonalElevation = 0.dp,
             ) {
                 NAV_TABS.forEachIndexed { index, tab ->
                     val selected = index == selectedTab
@@ -270,7 +276,7 @@ private fun DesktopLayout(
             modifier = Modifier
                 .width(80.dp)
                 .fillMaxHeight(),
-            containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(2.dp),
+            containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.55f),
             header = {
                 // Logo area
                 Spacer(Modifier.height(16.dp))
@@ -330,8 +336,7 @@ private fun DesktopLayout(
         Box(
             modifier = Modifier
                 .weight(1f)
-                .fillMaxHeight()
-                .background(MaterialTheme.colorScheme.background),
+                .fillMaxHeight(),
         ) {
             NavHostContent(navController, chatViewModel, textToSpeech)
         }
@@ -349,8 +354,7 @@ private fun NavHostContent(
         navController,
         startDestination = Home,
         modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
+            .fillMaxSize(),
     ) {
         composable<Home> {
             ChatScreen(
