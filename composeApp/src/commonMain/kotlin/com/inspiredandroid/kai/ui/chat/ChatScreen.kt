@@ -208,7 +208,6 @@ private fun InteractiveModeScreen(uiState: ChatUiState) {
     Box(
         Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
             .navigationBarsPadding()
             .statusBarsPadding()
             .imePadding(),
@@ -504,7 +503,7 @@ private fun ChatModeScreen(
         }
     }
 
-    Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).navigationBarsPadding().statusBarsPadding().imePadding()) {
+    Box(Modifier.fillMaxSize().navigationBarsPadding().statusBarsPadding().imePadding()) {
         Column(Modifier.fillMaxSize()) {
             TopBar(
                 textToSpeech = textToSpeech,

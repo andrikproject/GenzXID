@@ -64,6 +64,7 @@ import com.genzxid.app.skills.SkillManifest
 import com.genzxid.app.ui.gradientBrush
 import com.genzxid.app.ui.handCursor
 import com.genzxid.app.ui.outlineTextFieldColors
+import com.genzxid.app.ui.softShadow
 import io.github.vinceglb.filekit.PlatformFile
 import io.github.vinceglb.filekit.dialogs.FileKitType
 import io.github.vinceglb.filekit.dialogs.compose.rememberFilePickerLauncher
@@ -195,6 +196,7 @@ fun QuestionInput(
                 .padding(16.dp)
                 .heightIn(max = 120.dp)
                 .fillMaxWidth()
+                .softShadow(RoundedCornerShape(28.dp), elevation = 14.dp, glow = true)
                 .clip(RoundedCornerShape(28.dp))
                 .background(MaterialTheme.colorScheme.background)
                 .border(
