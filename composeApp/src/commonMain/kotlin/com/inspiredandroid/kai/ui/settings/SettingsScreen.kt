@@ -414,7 +414,7 @@ fun SettingsScreenContent(
         )
     }
 
-    Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).navigationBarsPadding().statusBarsPadding().imePadding()) {
+    Box(Modifier.fillMaxSize().navigationBarsPadding().statusBarsPadding().imePadding()) {
         Column(Modifier.fillMaxSize(), horizontalAlignment = CenterHorizontally) {
             if (navigationTabBar != null) {
                 Row(

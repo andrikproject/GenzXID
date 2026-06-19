@@ -1,7 +1,6 @@
 package com.genzxid.app.ui.chat.composables
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import com.genzxid.app.data.Attachment
 import com.genzxid.app.decodeToImageBitmap
 import com.genzxid.app.ui.components.LocalShowFullScreenImage
+import com.genzxid.app.ui.glassSurface
 import com.genzxid.app.ui.handCursor
 import kai.composeapp.generated.resources.Res
 import kai.composeapp.generated.resources.ic_file
@@ -50,10 +50,7 @@ internal fun UserMessage(
             Spacer(Modifier.weight(1f))
             Column(
                 modifier = Modifier
-                    .background(
-                        MaterialTheme.colorScheme.onBackground.copy(alpha = 0.15f),
-                        RoundedCornerShape(8.dp),
-                    )
+                    .glassSurface(RoundedCornerShape(18.dp))
                     .padding(16.dp),
                 horizontalAlignment = Alignment.End,
             ) {
